@@ -209,7 +209,7 @@ ourWorkDesktopMethod(BuildContext context) {
 ourWorkMobileMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
-    height: 400,
+    height: 320,
     width: width,
     color: Color.fromARGB(255, 247, 246, 246),
     child: Column(
@@ -237,7 +237,7 @@ ourWorkMobileMethod(BuildContext context) {
           ),
         ),
         SizedBox(
-          height: 70,
+          height: 30,
         ),
         SizedBox(
           height: 100,
@@ -249,8 +249,8 @@ ourWorkMobileMethod(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                      height: 100,
-                      width: 180,
+                       height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -262,8 +262,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                      height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -275,8 +275,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                      height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -288,8 +288,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                       height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -301,8 +301,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                      height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -314,8 +314,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 120,
-                      width: 200,
+                       height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -327,8 +327,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                       height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -340,8 +340,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                       height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -353,8 +353,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                       height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -366,8 +366,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                       height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -379,8 +379,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 100,
-                      width: 180,
+                       height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),
@@ -392,8 +392,8 @@ ourWorkMobileMethod(BuildContext context) {
                     width: 30,
                   ),
                   Container(
-                      height: 120,
-                      width: 200,
+                      height: 85,
+                      width: 145,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(22),

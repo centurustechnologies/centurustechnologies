@@ -10,6 +10,7 @@ import 'package:centurus_web_app/view/helpers/services.dart';
 import 'package:centurus_web_app/view/helpers/servicewepro.dart';
 import 'package:centurus_web_app/view/helpers/we_build_any.dart';
 import 'package:centurus_web_app/view/helpers/webdesign.dart';
+import 'package:centurus_web_app/view/helpers/webdesign2.dart';
 import 'package:centurus_web_app/view/helpers/why_choose_us.dart';
 import 'package:centurus_web_app/view/navBar/desktop_navBar.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
@@ -163,90 +164,106 @@ class _DashboardState extends State<Dashboard>
               desktop: whyChooseUsDesktopMethod(context),
             ),
             ScreenTypeLayout(
-              mobile: WeBuildAnyDesktopMethod(context),
+              desktop: WeBuildAnyDesktopMethod(context),
+              mobile: WeBuildAnyMobileMethod(context),
+
             ),
-            Column(
-              children: [
-                Container(
-                  height: 80.0,
-                  width: width,
-                  color: mainColor,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(150, 0, 150, 0),
-                    child: TabBar(
+            Container(
+              color: mainColor,
+              child: Column(
+                children: [
+                  Container(
+                    height: 40.0,
+                    width: width,
+                    color: mainColor,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: TabBar(
+                        controller: tabController,
+                        indicatorColor: Colors.blue,
+                        indicatorSize: TabBarIndicatorSize.label,
+                        labelColor: Colors.white,
+                        unselectedLabelColor: Colors.grey,
+                        indicatorWeight: 5.0,
+                        tabs: [
+                          Tab(
+                            child: Text(
+                              'Web Design',
+                              style: GoogleFonts.openSans(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: 13,
+                                shadows: [
+                                  Shadow(
+                                    color: blackColor.withOpacity(0.2),
+                                    blurRadius: 1,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Tab(
+                            child: Text(
+                              'App Development',
+                              style: GoogleFonts.openSans(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: 13,
+                                shadows: [
+                                  Shadow(
+                                    color: blackColor.withOpacity(0.2),
+                                    blurRadius: 1,
+                                  ),
+                                ],
+                              ),textAlign: TextAlign.center ,
+                            ),
+                          ),
+                          Tab(
+                            child: Text(
+                              'UX/UI DEsign',
+                              style: GoogleFonts.openSans(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: 13,
+                                shadows: [
+                                  Shadow(
+                                    color: blackColor.withOpacity(0.2),
+                                    blurRadius: 1,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                  height: 430,
+                    width: width,
+                    color: mainColor,
+                    child: TabBarView(
                       controller: tabController,
-                      indicatorColor: Colors.blue,
-                      indicatorSize: TabBarIndicatorSize.label,
-                      labelColor: Colors.white,
-                      unselectedLabelColor: Colors.grey,
-                      indicatorWeight: 5.0,
-                      tabs: [
-                        Tab(
-                          child: Text(
-                            'Web Design',
-                            style: GoogleFonts.openSans(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                              fontSize: 21,
-                              shadows: [
-                                Shadow(
-                                  color: blackColor.withOpacity(0.2),
-                                  blurRadius: 1,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Tab(
-                          child: Text(
-                            'App Development',
-                            style: GoogleFonts.openSans(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                              fontSize: 21,
-                              shadows: [
-                                Shadow(
-                                  color: blackColor.withOpacity(0.2),
-                                  blurRadius: 1,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Tab(
-                          child: Text(
-                            'UX/UI DEsign',
-                            style: GoogleFonts.openSans(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                              fontSize: 21,
-                              shadows: [
-                                Shadow(
-                                  color: blackColor.withOpacity(0.2),
-                                  blurRadius: 1,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
+                      children: [
+                       ScreenTypeLayout(
+                desktop: WEbDEsign2(context),
+                //tablet: whyChooseUsTabletMethod(context),
+                mobile:WEbDEsign2MobileMethod(context),
+              ),
+                    ScreenTypeLayout(
+                desktop: WEbDEsign2(context),
+                //tablet: whyChooseUsTabletMethod(context),
+                mobile:WEbDEsign2MobileMethod(context),
+              ), ScreenTypeLayout(
+                desktop: WEbDEsign2(context),
+                //tablet: whyChooseUsTabletMethod(context),
+                mobile:WEbDEsign2MobileMethod(context),
+              ), 
                       ],
                     ),
                   ),
-                ),
-                Container(
-                  height: 470,
-                  width: width,
-                  color: mainColor,
-                  child: TabBarView(
-                    controller: tabController,
-                    children: [
-                      WebDesign(),
-                      WebDesign(),
-                      WebDesign(),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
             ScreenTypeLayout(
               mobile: serviceWeProvideMobileMethod(context),

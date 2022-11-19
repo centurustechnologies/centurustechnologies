@@ -278,22 +278,21 @@ BlogMobileMethod(BuildContext context) {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   elevation: 5.0,
-                  child: OnHover(builder: (isHovered) {
-                    return Container(
+                  child:  Container(
                       color: Colors.white,
                      
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            height: 250,
+                         OnHover(builder: (isHovered) {
+                            return Container(                            height: 250,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
                                     image: AssetImage('assets/blog-2.jpg'),
                                     fit: BoxFit.cover)),
-                          ),
+                          );}),
                           SizedBox(
                             height: 3,
                           ),
@@ -314,7 +313,7 @@ BlogMobileMethod(BuildContext context) {
                                     child: Text(
                               'Design',
                               style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
+                                    fontWeight: FontWeight.bold,
                                     color: Color.fromARGB(255, 21, 21, 21),
                                     fontSize: 11,
                               ),
@@ -353,8 +352,8 @@ BlogMobileMethod(BuildContext context) {
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w300,
                                   color: Color.fromARGB(255, 84, 82, 82),
-                                  fontSize: 14,
-                                ),textAlign: TextAlign.center,
+                                  fontSize: 13,
+                                ),
                               
                               ),
                             ), 
@@ -412,8 +411,8 @@ BlogMobileMethod(BuildContext context) {
                          
                         ],
                       ),
-                    );
-                  }),
+                    )
+                  
                 ),
               ),
             ),

@@ -93,7 +93,7 @@ clientSayDesktopMethod(BuildContext context) {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Pellentseque nec nam aliquam sam',
+                            'Pellentseque nec nam aliquam sam ',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w300,
                               color: Color.fromARGB(255, 53, 52, 52),
@@ -196,7 +196,7 @@ clientSayMobileMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
 
   return Container(
-    padding: EdgeInsets.all(10),
+    padding: EdgeInsets.fromLTRB(20, 20, 20, 50),
     width: width,
     color: mainColor,
     child: Column(
@@ -229,15 +229,15 @@ clientSayMobileMethod(BuildContext context) {
           height: 20,
         ),
         SizedBox(
-          width: width/1.1,
+          width: width,
           child: Text(
             'Credibly grow premier ideas rather than bricks-and-clicks strategic theme areas distributed for stand-alone web-readiness.',
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w300,
               color: Colors.grey,
               fontSize: 16,
-            ),
-            textAlign: TextAlign.center,
+            ),textAlign: TextAlign.center,
+    
           ),
         ),
        
@@ -246,7 +246,7 @@ clientSayMobileMethod(BuildContext context) {
         ),
        CarouselSlider(
           options: CarouselOptions(
-              height: 240,
+              height: 230,
               enlargeCenterPage: true,
               enableInfiniteScroll: true,
               viewportFraction: 1,
@@ -259,7 +259,7 @@ clientSayMobileMethod(BuildContext context) {
             return Builder(
               builder: (BuildContext context) {
                 return  Container(
-                    height: 200,
+                   padding: EdgeInsets.all(11),
                     width: 300,
                 
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),  color: Colors.white.withOpacity(0.8),),
@@ -277,12 +277,12 @@ clientSayMobileMethod(BuildContext context) {
                                 fontWeight: FontWeight.w300,
                                 color: Color.fromARGB(255, 53, 52, 52),
                                 fontSize: 14,
-                              ),textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                          
                           SizedBox(
-                            height: 40,
+                            height: 20,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,

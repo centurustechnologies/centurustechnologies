@@ -5,12 +5,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:responsive_grid_list/responsive_grid_list.dart';
 
+import 'onhover.dart';
+
 const LatLng currentLocation = LatLng(25.1193, 55.3773);
 
 Footer(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   var floatingActionButton;
   return Container(
+    padding: EdgeInsets.all(10),
     width: width,
     color: mainColor,
     child: Column(
@@ -18,7 +21,7 @@ Footer(BuildContext context) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           child: Center(
             child: SingleChildScrollView(
               child: ResponsiveGridList(
@@ -33,11 +36,10 @@ Footer(BuildContext context) {
                   maxItemsPerRow: 4,
                   children: [
                     Container(
-                      height: 360,
+                      height: 365,
                       color: mainColor,
-                      padding: EdgeInsets.all(10),
                       child: Padding(
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,8 +98,8 @@ Footer(BuildContext context) {
                       ),
                     ),
                     Container(
+                      height: 360,
                       color: mainColor,
-                      padding: EdgeInsets.all(10),
                       child: Padding(
                         padding: const EdgeInsets.all(20),
                         child: Column(
@@ -153,8 +155,8 @@ Footer(BuildContext context) {
                       ),
                     ),
                     Container(
+                      height: 360,
                       color: mainColor,
-                      padding: EdgeInsets.all(10),
                       child: Padding(
                         padding: const EdgeInsets.all(20),
                         child: Column(
@@ -244,8 +246,8 @@ Footer(BuildContext context) {
                       ),
                     ),
                     Container(
+                      height: 360,
                       color: mainColor,
-                      padding: EdgeInsets.all(10),
                       child: Padding(
                         padding: const EdgeInsets.all(20),
                         child: Column(
@@ -290,78 +292,102 @@ Footer(BuildContext context) {
             color: Colors.white.withOpacity(0.1),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(10),
-          child: Row(
+        SingleChildScrollView(
+          child: ResponsiveGridList(
+            listViewBuilderOptions: ListViewBuilderOptions(
+                shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
+            // horizontalGridSpacing: 200,
+            // horizontalGridMargin: 20,
+            verticalGridMargin: 10,
+            minItemWidth: 300,
+            minItemsPerRow: 1,
+            maxItemsPerRow: 2,
+            rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Copyright @2022 all rights reserved | This template is made by Anil",
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w300,
-                  color: Colors.white.withOpacity(0.3),
-                  fontSize: 15,
+              Center(
+                child: Text(
+                  "Copyright @2022 all rights reserved | Anil",
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white.withOpacity(0.3),
+                    fontSize: 14,
+                  ),
                 ),
               ),
-              SizedBox(width:width/2.2,),
-              Container(
-                  height: 25,
-                  width: 25,
-                  decoration: new BoxDecoration(
-                    
-                      borderRadius: BorderRadius.circular(25),
-                      image: new DecorationImage(
-                        
-                        image: new AssetImage("assets/facebook.png"),
-                        
-                        fit: BoxFit.fill,
-                      ))), 
-                      SizedBox(width: width/150,),
-                      Container(
-                  height: 25,
-                  width: 25,
-                  decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      image: new DecorationImage(
-                        image: new AssetImage("assets/linked.png"),
-                        fit: BoxFit.fill,
-                      ))), 
-                      SizedBox(width: width/150,),
-                      Container(
-                  height: 25,
-                  width: 25,
-                  decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      image: new DecorationImage(
-                        image: new AssetImage("assets/twitter.png"),
-                        fit: BoxFit.fill,
-                      ))),  SizedBox(width: width/150,),
-                      Container(
-                  height: 25,
-                  width: 25,
-                  decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      image: new DecorationImage(
-                        image: new AssetImage("assets/insta.png"),
-                        fit: BoxFit.fill,
-                      ))),  SizedBox(width: width/150,),
-                      Container(
-                  height: 25,
-                  width: 25,
-                  decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      image: new DecorationImage(
-                        image: new AssetImage("assets/tumblr.png"),
-                        fit: BoxFit.fill,
-                      ))),  SizedBox(width: width/150,),
-                       Container(
-                  height: 25,
-                  width: 25,
-                  decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      image: new DecorationImage(
-                        image: new AssetImage("assets/my-business.png"),
-                        fit: BoxFit.fill,
-                      ))),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                      height: 25,
+                      width: 25,
+                      decoration: new BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: new DecorationImage(
+                            image: new AssetImage("assets/facebook.png"),
+                            fit: BoxFit.fill,
+                          ))),
+                  SizedBox(
+                    width: width / 150,
+                  ),
+                  Container(
+                      height: 25,
+                      width: 25,
+                      decoration: new BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: new DecorationImage(
+                            image: new AssetImage("assets/linked.png"),
+                            fit: BoxFit.fill,
+                          ))),
+                  SizedBox(
+                    width: width / 150,
+                  ),
+                  Container(
+                      height: 25,
+                      width: 25,
+                      decoration: new BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: new DecorationImage(
+                            image: new AssetImage("assets/twitter.png"),
+                            fit: BoxFit.fill,
+                          ))),
+                  SizedBox(
+                    width: width / 150,
+                  ),
+                  Container(
+                      height: 25,
+                      width: 25,
+                      decoration: new BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: new DecorationImage(
+                            image: new AssetImage("assets/insta.png"),
+                            fit: BoxFit.fill,
+                          ))),
+                  SizedBox(
+                    width: width / 150,
+                  ),
+                  Container(
+                      height: 25,
+                      width: 25,
+                      decoration: new BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: new DecorationImage(
+                            image: new AssetImage("assets/tumblr.png"),
+                            fit: BoxFit.fill,
+                          ))),
+                  SizedBox(
+                    width: width / 150,
+                  ),
+                  Container(
+                      height: 25,
+                      width: 25,
+                      decoration: new BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: new DecorationImage(
+                            image: new AssetImage("assets/my-business.png"),
+                            fit: BoxFit.fill,
+                          ))),
+                ],
+              )
             ],
           ),
         ),
