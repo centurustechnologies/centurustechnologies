@@ -348,6 +348,162 @@ clientSayMobileMethod(BuildContext context) {
     ),
   );
 }
+clientSayTabletMethod(BuildContext context) {
+  var width = MediaQuery.of(context).size.width;
+
+  return Container(
+    padding: EdgeInsets.fromLTRB(20, 20, 20, 50),
+    width: width,
+    color: mainColor,
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        SizedBox(
+          height: 40,
+        ),
+        Text(
+          'Testimonial',
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.w400,
+            color: Colors.white,
+            fontSize: 18,
+          ),
+        ),
+        SizedBox(
+          height: 11,
+        ),
+        Text(
+          'What’s Clients Say',
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.w600,
+            color: Colors.white,
+            fontSize: 25,
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        SizedBox(
+          width: width,
+          child: Text(
+            'Credibly grow premier ideas rather than bricks-and-clicks strategic theme areas distributed for stand-alone web-readiness.',
+            style: GoogleFonts.poppins(
+              fontWeight: FontWeight.w300,
+              color: Colors.grey,
+              fontSize: 16,
+            ),textAlign: TextAlign.center,
+    
+          ),
+        ),
+       
+        SizedBox(
+          height: 25,
+        ),
+       CarouselSlider(
+          options: CarouselOptions(
+              height: 220,
+              enlargeCenterPage: true,
+              enableInfiniteScroll: true,
+              viewportFraction: 0.5,
+              aspectRatio: 1,
+              initialPage: 0,
+              pauseAutoPlayInFiniteScroll: true,
+              autoPlayInterval: Duration(seconds: 5),
+              autoPlay: true),
+          items: _Source.map((i) {
+            return Builder(
+              builder: (BuildContext context) {
+                return  Container(
+                   padding: EdgeInsets.all(11),
+                    width: 350,
+                
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),  color: Colors.white.withOpacity(0.8),),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: width/1.2,
+                            child: Text(
+                              'Pellentseque nec nam aliquam sam Utricies lacus sed turpis tincidunt id aliquet risesconsiquent america lectus quam id',
+                              style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w300,
+                                color: Color.fromARGB(255, 53, 52, 52),
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                         
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(25),
+                                    image: DecorationImage(
+                                        image: AssetImage('assets/logo45.jpg'),
+                                        fit: BoxFit.cover)),
+                              ),
+                              SizedBox(width: 20,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Alex Liverty',
+                                    style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black,
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Product Designer',
+                                    style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 66, 64, 64),
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  RatingBar.builder(
+                                    ignoreGestures: true,
+                                    itemSize: 14,
+                                    initialRating: 5,
+                                    minRating: 1,
+                                    direction: Axis.horizontal,
+                                    allowHalfRating: true,
+                                    itemCount: 5,
+                                    unratedColor: Colors.black.withOpacity(0.1),
+                                    itemBuilder: (context, _) => const Icon(
+                                      Icons.star,
+                                      color: Colors.amber,
+                                    ),
+                                    onRatingUpdate: (rating) {},
+                                  ),
+                                ],
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ); 
+              },
+            );
+          }).toList(),
+        )
+      ],
+    ),
+  );
+}
 final List _Source = [
   'assets/webde.jpg',
   'assets/webde.jpg',

@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 WEbDEsign2(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Padding(
-    padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+    padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,

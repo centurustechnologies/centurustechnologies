@@ -9,6 +9,7 @@ import 'package:centurus_web_app/view/helpers/portfolio.dart';
 import 'package:centurus_web_app/view/helpers/services.dart';
 import 'package:centurus_web_app/view/helpers/servicewepro.dart';
 import 'package:centurus_web_app/view/helpers/we_build_any.dart';
+import 'package:centurus_web_app/view/helpers/we_build_tech.dart';
 import 'package:centurus_web_app/view/helpers/webdesign.dart';
 import 'package:centurus_web_app/view/helpers/webdesign2.dart';
 import 'package:centurus_web_app/view/helpers/why_choose_us.dart';
@@ -160,145 +161,55 @@ class _DashboardState extends State<Dashboard>
             ),
             ScreenTypeLayout(
               mobile: whyChooseUsMobileMethod(context),
-              tablet: whyChooseUsTabletMethod(context),
+              //tablet: whyChooseUsTabletMethod(context),
               desktop: whyChooseUsDesktopMethod(context),
             ),
             ScreenTypeLayout(
               desktop: WeBuildAnyDesktopMethod(context),
               mobile: WeBuildAnyMobileMethod(context),
-
             ),
-            Container(
-              color: mainColor,
-              child: Column(
-                children: [
-                  Container(
-                    height: 40.0,
-                    width: width,
-                    color: mainColor,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: TabBar(
-                        controller: tabController,
-                        indicatorColor: Colors.blue,
-                        indicatorSize: TabBarIndicatorSize.label,
-                        labelColor: Colors.white,
-                        unselectedLabelColor: Colors.grey,
-                        indicatorWeight: 5.0,
-                        tabs: [
-                          Tab(
-                            child: Text(
-                              'Web Design',
-                              style: GoogleFonts.openSans(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white,
-                                fontSize: 13,
-                                shadows: [
-                                  Shadow(
-                                    color: blackColor.withOpacity(0.2),
-                                    blurRadius: 1,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'App Development',
-                              style: GoogleFonts.openSans(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white,
-                                fontSize: 13,
-                                shadows: [
-                                  Shadow(
-                                    color: blackColor.withOpacity(0.2),
-                                    blurRadius: 1,
-                                  ),
-                                ],
-                              ),textAlign: TextAlign.center ,
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'UX/UI DEsign',
-                              style: GoogleFonts.openSans(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white,
-                                fontSize: 13,
-                                shadows: [
-                                  Shadow(
-                                    color: blackColor.withOpacity(0.2),
-                                    blurRadius: 1,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                  height: 430,
-                    width: width,
-                    color: mainColor,
-                    child: TabBarView(
-                      controller: tabController,
-                      children: [
-                       ScreenTypeLayout(
-                desktop: WEbDEsign2(context),
-                //tablet: whyChooseUsTabletMethod(context),
-                mobile:WEbDEsign2MobileMethod(context),
-              ),
-                    ScreenTypeLayout(
-                desktop: WEbDEsign2(context),
-                //tablet: whyChooseUsTabletMethod(context),
-                mobile:WEbDEsign2MobileMethod(context),
-              ), ScreenTypeLayout(
-                desktop: WEbDEsign2(context),
-                //tablet: whyChooseUsTabletMethod(context),
-                mobile:WEbDEsign2MobileMethod(context),
-              ), 
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+            ScreenTypeLayout(
+              mobile: WeBuildTechMobileScreen(
+                  width: width, tabController: tabController),
+              tablet: WeBuildTechTabletScreen(
+                  width: width, tabController: tabController),
+              desktop: WeBuildTechDesktopScreen(
+                  width: width, tabController: tabController),
             ),
             ScreenTypeLayout(
               mobile: serviceWeProvideMobileMethod(context),
-              //tablet: whyChooseUsTabletMethod(context),
-              desktop:serviceWeProDesktopMethod(context),
+              tablet: serviceWeProvideTabletMethod(context),
+              desktop: serviceWeProDesktopMethod(context),
             ),
             ScreenTypeLayout(
               mobile: portFolioMobileMethod(context),
-              //tablet: whyChooseUsTabletMethod(context),
-              desktop:portFolioDesktopMethod(context),
+              tablet: portFolioTabletMethod(context),
+              desktop: portFolioDesktopMethod(context),
             ),
-           ScreenTypeLayout(
+            ScreenTypeLayout(
               mobile: ourWorkMobileMethod(context),
               //tablet: whyChooseUsTabletMethod(context),
-              desktop:ourWorkDesktopMethod(context),
+              desktop: ourWorkDesktopMethod(context),
             ),
-           ScreenTypeLayout(
+            ScreenTypeLayout(
               mobile: clientSayMobileMethod(context),
-              //tablet: whyChooseUsTabletMethod(context),
-              desktop:clientSayDesktopMethod(context),
+              tablet: clientSayTabletMethod(context),
+              desktop: clientSayDesktopMethod(context),
             ),
-           ScreenTypeLayout(
+            ScreenTypeLayout(
               mobile: servicesMobileMethod(context),
               //tablet: whyChooseUsTabletMethod(context),
-              desktop:servicesDesktopMethod(context),
+              desktop: servicesDesktopMethod(context),
             ),
             ScreenTypeLayout(
               mobile: ContactUsMobileMethod(context),
               //tablet: whyChooseUsTabletMethod(context),
-              desktop:ContactUsDesktopMethod(context),
+              desktop: ContactUsDesktopMethod(context),
             ),
-           ScreenTypeLayout(
+            ScreenTypeLayout(
               mobile: BlogMobileMethod(context),
               //tablet: whyChooseUsTabletMethod(context),
-              desktop:BlogDesktopMethod(context),
+              desktop: BlogDesktopMethod(context),
             ),
             Footer(context),
           ],

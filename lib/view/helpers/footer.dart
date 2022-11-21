@@ -1,4 +1,5 @@
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
+import 'package:easy_web_view2/easy_web_view2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_launcher_icons/xml_templates.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,6 +7,12 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:responsive_grid_list/responsive_grid_list.dart';
 
 import 'onhover.dart';
+
+String src =
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.742150073073!2d75.86811477516136!3d30.89387347450696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a830fff75fc87%3A0x74b3bff073fbadf2!2sCenturus%20Technologies%20Private%20Limited%20%7C%20App%20%26%20Web%20Development%20Company%20In%20Ludhiana!5e0!3m2!1sen!2sin!4v1668866272359!5m2!1sen!2sin';
+   ValueKey key = const ValueKey('key_0');
+  final bool _isMarkdown = false;
+  final bool _useWidgets = false;
 
 const LatLng currentLocation = LatLng(25.1193, 55.3773);
 
@@ -245,41 +252,48 @@ Footer(BuildContext context) {
                         ),
                       ),
                     ),
-                    Container(
-                      height: 360,
-                      color: mainColor,
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Location",
-                              style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
+                   Container(
+                    height: 360,
+                    width: width,
+                    
+                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text(
+                                "Location",
+                                style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              height: 28,
-                            ),
-                            Container(
-                              height: 150,
-                              width: 220,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.amber),
-                              child: GoogleMap(
-                                initialCameraPosition:
-                                    CameraPosition(target: currentLocation),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
+                          ),
+
+                         Padding(
+                           padding: const EdgeInsets.fromLTRB(0, 40, 70, 50),
+                           child: Container(
+                            
+                            height: 220,
+                            
+                
+                width: width,
+                child: EasyWebView(
+                  src: src,
+                  onLoaded: () {
+                            print('$key: Loaded: $src');
+                  },
+                  isMarkdown: _isMarkdown,
+                  convertToWidgets: _useWidgets,
+                  key: key,
+                ),
+              ),
+                         ),
+                       ],
+                     ),
+                   ),
                   ]),
             ),
           ),

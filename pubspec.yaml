@@ -29,6 +29,7 @@ environment:
 dependencies:
   carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
+  easy_web_view2: ^0.0.3
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.10.0
