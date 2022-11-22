@@ -1,3 +1,4 @@
+import 'package:centurus_web_app/view/helpers/appDesign.dart';
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/webdesign2.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,6 @@ class WeBuildTechTabletScreen extends StatelessWidget {
                 tabs: [
                   Tab(
                     child: Container(
-                      
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -73,7 +73,6 @@ class WeBuildTechTabletScreen extends StatelessWidget {
                   ),
                   Tab(
                     child: Container(
-                      
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -110,7 +109,6 @@ class WeBuildTechTabletScreen extends StatelessWidget {
                   ),
                   Tab(
                     child: Container(
-                      
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -160,10 +158,10 @@ class WeBuildTechTabletScreen extends StatelessWidget {
                   //tablet: whyChooseUsTabletMethod(context),
                   mobile: WEbDEsign2MobileMethod(context),
                 ),
-                ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                 ScreenTypeLayout(
+                  desktop: appDesignDesktopMethod(context),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: appDesignMobileMethod(context),
                 ),
                 ScreenTypeLayout(
                   desktop: WEbDEsign2(context),
@@ -178,6 +176,7 @@ class WeBuildTechTabletScreen extends StatelessWidget {
     );
   }
 }
+
 class WeBuildTechDesktopScreen extends StatelessWidget {
   const WeBuildTechDesktopScreen({
     Key? key,
@@ -334,10 +333,10 @@ class WeBuildTechDesktopScreen extends StatelessWidget {
                   //tablet: whyChooseUsTabletMethod(context),
                   mobile: WEbDEsign2MobileMethod(context),
                 ),
-                ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                 ScreenTypeLayout(
+                  desktop: appDesignDesktopMethod(context),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: appDesignMobileMethod(context),
                 ),
                 ScreenTypeLayout(
                   desktop: WEbDEsign2(context),
@@ -352,6 +351,7 @@ class WeBuildTechDesktopScreen extends StatelessWidget {
     );
   }
 }
+
 class WeBuildTechMobileScreen extends StatelessWidget {
   const WeBuildTechMobileScreen({
     Key? key,
@@ -384,7 +384,6 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                 tabs: [
                   Tab(
                     child: Container(
-                      
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -400,26 +399,29 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                           ),
                           SizedBox(
                             width: 5,
-                          ),SizedBox(height: 7,),
+                          ),
+                          SizedBox(
+                            height: 7,
+                          ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                Text('Web',
+                                    style: GoogleFonts.openSans(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                      shadows: [
+                                        Shadow(
+                                          color: blackColor.withOpacity(0.2),
+                                          blurRadius: 1,
+                                        ),
+                                      ],
+                                    )),
                                 Text(
-                                  'Web',
-                                  style: GoogleFonts.openSans(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.white,
-                                    fontSize: 10,
-                                    shadows: [
-                                      Shadow(
-                                        color: blackColor.withOpacity(0.2),
-                                        blurRadius: 1,
-                                      ),
-                                    ],
-                                  )),Text(
                                   'Design',
                                   style: GoogleFonts.openSans(
                                     fontWeight: FontWeight.w500,
@@ -442,7 +444,6 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                   ),
                   Tab(
                     child: Container(
-                    
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -457,7 +458,10 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                           ),
                           SizedBox(
                             width: 5,
-                          ),SizedBox(height: 7,),
+                          ),
+                          SizedBox(
+                            height: 7,
+                          ),
                           Padding(
                             padding: const EdgeInsets.all(7.0),
                             child: Column(
@@ -478,7 +482,8 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                                     ],
                                   ),
                                   textAlign: TextAlign.center,
-                                ), Text(
+                                ),
+                                Text(
                                   'Development',
                                   style: GoogleFonts.openSans(
                                     fontWeight: FontWeight.w400,
@@ -502,7 +507,6 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                   ),
                   Tab(
                     child: Container(
-                    
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -517,7 +521,10 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                           ),
                           SizedBox(
                             width: 5,
-                          ),SizedBox(height: 7,),
+                          ),
+                          SizedBox(
+                            height: 7,
+                          ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
@@ -535,7 +542,8 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                ),Text(
+                                ),
+                                Text(
                                   'Design',
                                   style: GoogleFonts.openSans(
                                     fontWeight: FontWeight.w500,
@@ -573,9 +581,9 @@ class WeBuildTechMobileScreen extends StatelessWidget {
                   mobile: WEbDEsign2MobileMethod(context),
                 ),
                 ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                  desktop: appDesignDesktopMethod(context),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: appDesignMobileMethod(context),
                 ),
                 ScreenTypeLayout(
                   desktop: WEbDEsign2(context),

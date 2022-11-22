@@ -77,11 +77,15 @@ BlogDesktopMethod(BuildContext context) {
                         children: [
                           Container(
                             height: 250,
+                            width: width,
+                            child: index==0? Image.asset('assets/blog-2.jpg',fit: BoxFit.cover,):index==1?Image.asset('assets/ee-1.jpg',fit: BoxFit.cover):Image.asset('assets/ee-3.jpg',fit: BoxFit.cover),
+                            
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    image: AssetImage('assets/blog-2.jpg'),
-                                    fit: BoxFit.cover)),
+                               // image: DecorationImage(
+                                 //   image: AssetImage('assets/blog-2.jpg'),
+                                   // fit: BoxFit.cover)),
+                            )
                           ),
                           SizedBox(
                             height: 3,
@@ -287,12 +291,13 @@ BlogMobileMethod(BuildContext context) {
                         children: [
                          OnHover(builder: (isHovered) {
                             return Container(                            height: 250,
+                           child: index==0? Image.asset('assets/blog-2.jpg',fit: BoxFit.cover,):index==1?Image.asset('assets/ee-1.jpg',fit: BoxFit.cover):Image.asset('assets/ee-3.jpg',fit: BoxFit.cover), 
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    image: AssetImage('assets/blog-2.jpg'),
-                                    fit: BoxFit.cover)),
-                          );}),
+                                //image: DecorationImage(
+                                    //image: AssetImage('assets/blog-2.jpg'),
+                                   // fit: BoxFit.cover)),
+                         ));}),
                           SizedBox(
                             height: 3,
                           ),

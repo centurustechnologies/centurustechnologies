@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:easy_web_view2/easy_web_view2.dart';
 import 'package:flutter/material.dart';
@@ -306,7 +308,15 @@ Footer(BuildContext context) {
             color: Colors.white.withOpacity(0.1),
           ),
         ),
-        SingleChildScrollView(
+       builtFooter(context),
+      ],
+    ),
+  );
+}
+builtFooter(context){
+    
+    var width = MediaQuery.of(context).size.width;
+  return  SingleChildScrollView(
           child: ResponsiveGridList(
             listViewBuilderOptions: ListViewBuilderOptions(
                 shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
@@ -404,8 +414,5 @@ Footer(BuildContext context) {
               )
             ],
           ),
-        ),
-      ],
-    ),
-  );
+        );
 }

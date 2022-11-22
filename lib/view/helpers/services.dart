@@ -53,88 +53,79 @@ servicesDesktopMethod(BuildContext context) {
           child: ResponsiveGridList(
             listViewBuilderOptions: ListViewBuilderOptions(
                 shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
-            horizontalGridSpacing: 3,
+            horizontalGridSpacing: 10,
             horizontalGridMargin: 50,
             verticalGridMargin: 50,
             minItemWidth: 250,
             maxItemsPerRow: 3,
             children: List.generate(
               6,
-              (index) => Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                elevation: 3.0,
-                child: OnHover(builder: (isHovered) {
-                  return Container(
-                    color: Color.fromARGB(255, 249, 228, 228),
-                    height: 250,
-                    width: 250,
-                   
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 25,
+              (index) => OnHover(builder: (isHovered) {
+                return Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 40,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: index == 0
+                        ? Colors.amberAccent
+                        : index == 1
+                            ? Colors.blueAccent
+                            : index == 2
+                                ? Colors.green
+                                : index == 3
+                                    ? Colors.red
+                                    : index == 4
+                                        ? Colors.orange
+                                        : Colors.purple,
+                  ),
+                  // height: 250,
+                  //width: 250,
+
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 60,
+                        width: 60,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage('assets/logo45.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
+                      SizedBox(
+                        height: 18,
+                      ),
+                      Text(
+                        'Web Development',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w700,
+                          color: Color.fromARGB(255, 21, 21, 21),
+                          fontSize: 23,
                         ),
-                        Container(
-                          height: 60,
-                          width: 60,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                  image: AssetImage('assets/logo45.jpg'),
-                                  fit: BoxFit.cover)),
-                        ),
-                        SizedBox(
-                          height: 18,
-                        ),
-                        Text(
-                          'Web Development',
+                      ),
+                      SizedBox(
+                        height: 11,
+                      ),
+                      SizedBox(
+                        width: width / 4,
+                        child: Text(
+                          'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
                           style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w700,
-                            color: Color.fromARGB(255, 21, 21, 21),
-                            fontSize: 23,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.white.withOpacity(.6),
+                            fontSize: 14,
                           ),
+                          textAlign: TextAlign.center,
                         ),
-                        SizedBox(
-                          height: 11,
-                        ),
-                        Text(
-                          'Holisticly morph distinctive methodologies',
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w300,
-                            color: Color.fromARGB(255, 130, 127, 127),
-                            fontSize: 16,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 11,
-                        ),
-                        Text(
-                          'and vertical e-tailers. Rapidiously grow',
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w300,
-                            color: Color.fromARGB(255, 130, 127, 127),
-                            fontSize: 16,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 11,
-                        ),
-                        Text(
-                          'customized data.',
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w300,
-                            color: Color.fromARGB(255, 130, 127, 127),
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                }),
-              ),
+                      ),
+                    ],
+                  ),
+                );
+              }),
             ),
           ),
         ),
@@ -142,6 +133,7 @@ servicesDesktopMethod(BuildContext context) {
     ),
   );
 }
+
 servicesMobileMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
@@ -167,7 +159,7 @@ servicesMobileMethod(BuildContext context) {
           height: 15,
         ),
         SizedBox(
-          width: width/1.1,
+          width: width / 1.1,
           child: Text(
             'Credibly grow premier ideas rather than bricks-and-clicks strategic theme areas distributed for stand-alone web-readiness.',
             style: GoogleFonts.poppins(
@@ -178,8 +170,6 @@ servicesMobileMethod(BuildContext context) {
             textAlign: TextAlign.center,
           ),
         ),
-       
-        
         SizedBox(
           height: 12,
         ),
@@ -200,10 +190,21 @@ servicesMobileMethod(BuildContext context) {
                 elevation: 1.0,
                 child: OnHover(builder: (isHovered) {
                   return Container(
-                    
                     height: 250,
                     width: 250,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Color.fromARGB(255, 249, 228, 228),),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: index == 0
+                            ? Colors.amber
+                            : index == 1
+                                ? Colors.blue
+                                : index == 2
+                                    ? Colors.yellow
+                                    : index == 3
+                                        ? Colors.red
+                                        : index == 4
+                                            ? Colors.pink
+                                            : Colors.yellow),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -235,7 +236,7 @@ servicesMobileMethod(BuildContext context) {
                           height: 11,
                         ),
                         SizedBox(
-                          width: width/1.1,
+                          width: width / 1.1,
                           child: Text(
                             'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
                             style: GoogleFonts.poppins(
@@ -246,7 +247,6 @@ servicesMobileMethod(BuildContext context) {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        
                       ],
                     ),
                   );

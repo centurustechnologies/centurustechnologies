@@ -10,7 +10,7 @@ import 'package:centurus_web_app/view/helpers/services.dart';
 import 'package:centurus_web_app/view/helpers/servicewepro.dart';
 import 'package:centurus_web_app/view/helpers/we_build_any.dart';
 import 'package:centurus_web_app/view/helpers/we_build_tech.dart';
-import 'package:centurus_web_app/view/helpers/webdesign.dart';
+import 'package:centurus_web_app/view/helpers/appDesign.dart';
 import 'package:centurus_web_app/view/helpers/webdesign2.dart';
 import 'package:centurus_web_app/view/helpers/why_choose_us.dart';
 import 'package:centurus_web_app/view/navBar/desktop_navBar.dart';

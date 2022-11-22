@@ -4,9 +4,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-WEbDEsign2(BuildContext context) {
+appDesignDesktopMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
-  
+
   return Padding(
     padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
     child: Row(
@@ -19,7 +19,10 @@ WEbDEsign2(BuildContext context) {
         Container(
           height: 390,
           width: 390,
-          child: Image.asset('assets/tab_img1.png',fit: BoxFit.fill,),
+          child: Image.asset(
+            'assets/widget-12.png',
+            fit: BoxFit.fill,
+          ),
           decoration: new BoxDecoration(
             borderRadius: BorderRadius.circular(25),
             // image: new DecorationImage(
@@ -201,7 +204,7 @@ WEbDEsign2(BuildContext context) {
   );
 }
 
-WEbDEsign2MobileMethod(BuildContext context) {
+appDesignMobileMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Padding(
     padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
@@ -212,12 +215,17 @@ WEbDEsign2MobileMethod(BuildContext context) {
         Container(
             height: 150,
             width: 150,
+            child: Image.asset(
+              'assets/widget-12.png',
+              fit: BoxFit.fill,
+            ),
             decoration: new BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: new DecorationImage(
-                  image: new AssetImage("assets/tab_img1.png"),
-                  fit: BoxFit.fill,
-                ))),
+              borderRadius: BorderRadius.circular(25),
+              //image: new DecorationImage(
+              // image: new AssetImage("assets/tab_img1.png"),
+              // fit: BoxFit.fill,
+              //)
+            )),
         SizedBox(
           height: 25,
         ),
