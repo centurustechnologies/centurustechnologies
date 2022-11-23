@@ -128,7 +128,7 @@ growBussinessDesktopMethod(BuildContext context) {
           padding: EdgeInsets.symmetric(vertical: 30),
           width: width,
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(100, 400, 0, 0),
+            padding: const EdgeInsets.fromLTRB(100, 300, 0, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -420,7 +420,7 @@ growBussinessDesktopMethod(BuildContext context) {
         ),
       ]),
       Positioned(
-        bottom: 700,
+        bottom: 750,
         right: 100,
         child: Container(
           height: 400,
@@ -433,7 +433,7 @@ growBussinessDesktopMethod(BuildContext context) {
         ),
       ),
       Positioned(
-        bottom: 780,
+        bottom: 800,
         left: 96,
         child: Container(
           height: 450,

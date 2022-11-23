@@ -316,7 +316,7 @@ class contactUsScreen extends StatelessWidget {
                 color: Colors.white.withOpacity(0.3),
               ),
             ),SizedBox(height: 13,),
-             builtFooter(context),
+             builtFooter(context,Colors.white,mainColor),
           ],
         ),
       ),

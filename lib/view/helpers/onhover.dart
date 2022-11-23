@@ -17,7 +17,7 @@ bool isHovered=false;
   @override
   Widget build(BuildContext context) {
 
-    final hovered=Matrix4.identity()..scale(1.012);
+    final hovered=Matrix4.identity()..scale(1.01);
     final transform=isHovered? hovered:Matrix4.identity();
 
 

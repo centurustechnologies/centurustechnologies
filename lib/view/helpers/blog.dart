@@ -8,10 +8,10 @@ import 'onhover.dart';
 BlogDesktopMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
-    padding: EdgeInsets.all(10),
+    padding: EdgeInsets.all(30),
     width: width,
     child: Padding(
-      padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+      padding: const EdgeInsets.fromLTRB(0, 40, 0, 30),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -214,7 +214,30 @@ BlogDesktopMethod(BuildContext context) {
                 ),
               ),
             ),
-          ),
+          ),SizedBox(height: 5,),
+          MaterialButton(
+                      color: Colors.blue,
+                      hoverColor: mainColor,
+                      height: 55,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          color: Colors.blue,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      onPressed: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 18),
+                        child: Text(
+                          'Read More',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                    ),
         ],
       ),
     ),

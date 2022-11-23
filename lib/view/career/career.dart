@@ -1,5 +1,11 @@
 import 'dart:developer';
+import 'dart:html';
 
+import 'package:centurus_web_app/view/blog/helper/headertitle.dart';
+import 'package:centurus_web_app/view/career/helper/jobs.dart';
+import 'package:centurus_web_app/view/contact_us_screen.dart';
+import 'package:centurus_web_app/view/header_widget.dart';
+import 'package:centurus_web_app/view/helpers/contactus.dart';
 import 'package:centurus_web_app/view/helpers/footer.dart';
 import 'package:centurus_web_app/view/navBar/desktop_navBar.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
@@ -11,20 +17,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../helpers/blog.dart';
-import '../helpers/contactus.dart';
-import 'helper/growbusiness.dart';
-import 'helper/ourTeam.dart';
-import 'helper/ourvalues.dart';
-
-class AboutUs extends StatefulWidget {
-  const AboutUs({Key? key}) : super(key: key);
+class career extends StatefulWidget {
+  const career({Key? key}) : super(key: key);
 
   @override
-  State<AboutUs> createState() => _DashboardState();
+  State<career> createState() => _DashboardState();
 }
 
-class _DashboardState extends State<AboutUs>
+class _DashboardState extends State<career>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -50,30 +50,11 @@ class _DashboardState extends State<AboutUs>
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: growBussinessDesktopMethod(context),
-              ),
-              ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: ourValuesDesktopMethod(context),
-              ),
-              ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: ourTeamDesktopMethod(context),
-              ),
-               ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: BlogDesktopMethod(context),
-              ), ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: ContactUsDesktopMethod(context),
-              ),
+              HeaderWidget(width: width, scaffoldKey: scaffoldKey),
+              headerTitle(context),
+              jobs(context),
+              //contactUsScreen(),
+              ContactUsDesktopMethod(context),
               Footer(context, whiteColor, mainColor),
             ],
           ),

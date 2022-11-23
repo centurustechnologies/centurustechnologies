@@ -1,5 +1,7 @@
 import 'dart:developer';
 
+import 'package:centurus_web_app/view/blog/helper/headertitle.dart';
+import 'package:centurus_web_app/view/header_widget.dart';
 import 'package:centurus_web_app/view/helpers/footer.dart';
 import 'package:centurus_web_app/view/navBar/desktop_navBar.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
@@ -12,19 +14,16 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../helpers/blog.dart';
-import '../helpers/contactus.dart';
-import 'helper/growbusiness.dart';
-import 'helper/ourTeam.dart';
-import 'helper/ourvalues.dart';
+import 'helper/blogpage.dart';
 
-class AboutUs extends StatefulWidget {
-  const AboutUs({Key? key}) : super(key: key);
+class OurBlog extends StatefulWidget {
+  const OurBlog({Key? key}) : super(key: key);
 
   @override
-  State<AboutUs> createState() => _DashboardState();
+  State<OurBlog> createState() => _DashboardState();
 }
 
-class _DashboardState extends State<AboutUs>
+class _DashboardState extends State<OurBlog>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -50,31 +49,10 @@ class _DashboardState extends State<AboutUs>
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: growBussinessDesktopMethod(context),
-              ),
-              ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: ourValuesDesktopMethod(context),
-              ),
-              ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: ourTeamDesktopMethod(context),
-              ),
-               ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: BlogDesktopMethod(context),
-              ), ScreenTypeLayout(
-                mobile: mobileBanner(context),
-                //tablet: tabletBanner(context),
-                desktop: ContactUsDesktopMethod(context),
-              ),
-              Footer(context, whiteColor, mainColor),
+              HeaderWidget(width: width, scaffoldKey: scaffoldKey),
+              headerTitle(context),
+              blogMethod(context),
+              Footer(context, mainColor, whiteColor),
             ],
           ),
         ),

@@ -18,13 +18,16 @@ String src =
 
 const LatLng currentLocation = LatLng(25.1193, 55.3773);
 
-Footer(BuildContext context) {
+Footer(BuildContext context, color, secondaryColor) {
   var width = MediaQuery.of(context).size.width;
   var floatingActionButton;
   return Container(
     padding: EdgeInsets.all(10),
     width: width,
-    color: mainColor,
+    
+    decoration: BoxDecoration(color: color, image: DecorationImage(
+                                    image: AssetImage('assets/page-header-bg.png'),
+                                    fit: BoxFit.cover)),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +49,6 @@ Footer(BuildContext context) {
                   children: [
                     Container(
                       height: 365,
-                      color: mainColor,
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                         child: Column(
@@ -57,7 +59,7 @@ Footer(BuildContext context) {
                               "About Us",
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white,
+                                color: secondaryColor,
                                 fontSize: 20,
                               ),
                             ),
@@ -70,7 +72,7 @@ Footer(BuildContext context) {
                                 "We are leading IT company dealing with app development & design, web development & design services. We had 3+ years of experience in development field and done more than 20+ projects. We work on iOS, android device's app development.",
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w200,
-                                  color: Colors.white,
+                                  color:  secondaryColor,
                                   fontSize: 12,
                                 ),
                               ),
@@ -96,7 +98,7 @@ Footer(BuildContext context) {
                                   "Centurus Technologies Pvt. Ltd.",
                                   style: GoogleFonts.poppins(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white,
+                                    color:  secondaryColor,
                                     fontSize: 15,
                                   ),
                                 ),
@@ -108,7 +110,7 @@ Footer(BuildContext context) {
                     ),
                     Container(
                       height: 360,
-                      color: mainColor,
+                      //color: color,
                       child: Padding(
                         padding: const EdgeInsets.all(20),
                         child: Column(
@@ -119,7 +121,7 @@ Footer(BuildContext context) {
                               "Contact Info",
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white,
+                                color:  secondaryColor,
                                 fontSize: 20,
                               ),
                             ),
@@ -132,7 +134,7 @@ Footer(BuildContext context) {
                                 'Adress:Pwd Market, Division No. 6, SCO 18-19, Dholewal Chowk, Ludhiana, Punjab 141003',
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w200,
-                                  color: Colors.white,
+                                  color:  secondaryColor,
                                   fontSize: 12,
                                 ),
                               ),
@@ -144,7 +146,7 @@ Footer(BuildContext context) {
                               'Phone No +91-7719767557',
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.w200,
-                                color: Colors.white,
+                                color:  secondaryColor,
                                 fontSize: 12,
                               ),
                             ),
@@ -155,7 +157,7 @@ Footer(BuildContext context) {
                               'anil337228@gmail.com',
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.w200,
-                                color: Colors.white,
+                                color:  secondaryColor,
                                 fontSize: 12,
                               ),
                             ),
@@ -165,7 +167,7 @@ Footer(BuildContext context) {
                     ),
                     Container(
                       height: 360,
-                      color: mainColor,
+                      //color: color,
                       child: Padding(
                         padding: const EdgeInsets.all(20),
                         child: Column(
@@ -176,7 +178,7 @@ Footer(BuildContext context) {
                               "Important Links",
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white,
+                                color:  secondaryColor,
                                 fontSize: 20,
                               ),
                             ),
@@ -189,7 +191,7 @@ Footer(BuildContext context) {
                                 "Home",
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 182, 172, 172),
+                                  color:  secondaryColor,
                                   fontSize: 16,
                                 ),
                               ),
@@ -203,7 +205,7 @@ Footer(BuildContext context) {
                                 "About Us",
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 182, 172, 172),
+                                  color:  secondaryColor,
                                   fontSize: 16,
                                 ),
                               ),
@@ -217,7 +219,7 @@ Footer(BuildContext context) {
                                 "Our Services",
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 182, 172, 172),
+                                  color:  secondaryColor,
                                   fontSize: 16,
                                 ),
                               ),
@@ -231,7 +233,7 @@ Footer(BuildContext context) {
                                 "Privacy Policy",
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 182, 172, 172),
+                                  color:  secondaryColor,
                                   fontSize: 16,
                                 ),
                               ),
@@ -245,7 +247,7 @@ Footer(BuildContext context) {
                                 "Terms & Condition",
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 182, 172, 172),
+                                  color:  secondaryColor,
                                   fontSize: 16,
                                 ),
                               ),
@@ -268,7 +270,7 @@ Footer(BuildContext context) {
                                 "Location",
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white,
+                                  color:  secondaryColor,
                                   fontSize: 20,
                                 ),
                               ),
@@ -305,15 +307,15 @@ Footer(BuildContext context) {
           child: Container(
             height: 1,
             width: width,
-            color: Colors.white.withOpacity(0.1),
+            color: secondaryColor,
           ),
         ),
-       builtFooter(context),
+       builtFooter(context,Colors.white,mainColor),
       ],
     ),
   );
 }
-builtFooter(context){
+builtFooter(context,Color,secondaryColor){
     
     var width = MediaQuery.of(context).size.width;
   return  SingleChildScrollView(
@@ -333,7 +335,7 @@ builtFooter(context){
                   "Copyright @2022 all rights reserved | Anil",
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w300,
-                    color: Colors.white.withOpacity(0.3),
+                    color:  secondaryColor,
                     fontSize: 14,
                   ),
                 ),
