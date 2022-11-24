@@ -1,5 +1,3 @@
-import 'package:centurus_web_app/view/contact_us_screen.dart';
-import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_grid_list/responsive_grid_list.dart';
@@ -7,7 +5,7 @@ import 'package:responsive_grid_list/responsive_grid_list.dart';
 everything(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
-    padding: EdgeInsets.all(50),
+    padding: const EdgeInsets.all(50),
     width: width,
     child: Column(
       children: [
@@ -16,7 +14,7 @@ everything(BuildContext context) {
           style: GoogleFonts.poppins(
               fontWeight: FontWeight.w700, color: Colors.black, fontSize: 40),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         SizedBox(
@@ -25,18 +23,19 @@ everything(BuildContext context) {
             'Progressively deploy market positioning catalysts for change and technically sound authoritatively e-enable resource-leveling infrastructures.',
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w400,
-                color: Color.fromARGB(255, 94, 93, 93),
+                color: const Color.fromARGB(255, 94, 93, 93),
                 fontSize: 16),
             textAlign: TextAlign.center,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 60,
         ),
         SingleChildScrollView(
           child: ResponsiveGridList(
               listViewBuilderOptions: ListViewBuilderOptions(
-                  shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics()),
               horizontalGridSpacing: 40,
               horizontalGridMargin: 5,
               verticalGridMargin: 0,
@@ -59,7 +58,7 @@ contain(BuildContext context) {
     decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Colors.white,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(color: Colors.blue, spreadRadius: 0.5, blurRadius: 2),
         ]),
     child: Padding(
@@ -73,7 +72,7 @@ contain(BuildContext context) {
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w700, color: Colors.black, fontSize: 40),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Text(
@@ -81,7 +80,7 @@ contain(BuildContext context) {
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w500, color: Colors.black, fontSize: 19),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           SizedBox(
@@ -90,7 +89,7 @@ contain(BuildContext context) {
               'Rapidiously embrace distinctive best practices after B2B syndicate.',
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w500,
-                  color: Color.fromARGB(255, 124, 123, 123),
+                  color: const Color.fromARGB(255, 124, 123, 123),
                   fontSize: 16),
             ),
           )

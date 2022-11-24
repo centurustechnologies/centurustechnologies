@@ -1,6 +1,5 @@
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/onhover.dart';
-import 'package:centurus_web_app/view/viewus/helper/viewus.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_grid_list/responsive_grid_list.dart';
@@ -231,13 +230,16 @@ child2(BuildContext context) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(boxShadow: [
-            BoxShadow(
-                color: Colors.black.withOpacity(0.1),
-                spreadRadius: 1,
-                blurRadius: 10),
-          ], shape: BoxShape.circle, color: Color.fromARGB(255, 201, 221, 238)),
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    spreadRadius: 1,
+                    blurRadius: 10),
+              ],
+              shape: BoxShape.circle,
+              color: const Color.fromARGB(255, 201, 221, 238)),
           child: Image.asset(
             'assets/house2.png',
             fit: BoxFit.cover,
@@ -245,7 +247,7 @@ child2(BuildContext context) {
             width: 35,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 18,
         ),
         Text(
@@ -256,7 +258,7 @@ child2(BuildContext context) {
             fontSize: 20,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 11,
         ),
         SizedBox(
@@ -270,7 +272,7 @@ child2(BuildContext context) {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         MaterialButton(
@@ -278,7 +280,7 @@ child2(BuildContext context) {
           // hoverColor: Colors.blue,
           height: 50,
           shape: RoundedRectangleBorder(
-            side: BorderSide(
+            side: const BorderSide(
               color: Colors.white,
             ),
             borderRadius: BorderRadius.circular(5),

@@ -1,5 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
-import 'package:centurus_web_app/view/ourservices/helper/ourservices.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,35 +29,35 @@ class DesktopNavbar extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 30),
+        const SizedBox(width: 30),
         Text(
           'About Us',
           style: GoogleFonts.openSans(
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(width: 30),
+        const SizedBox(width: 30),
         Text(
           'Our Services',
           style: GoogleFonts.openSans(
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(width: 30),
+        const SizedBox(width: 30),
         Text(
           'Privacy Policy',
           style: GoogleFonts.openSans(
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(width: 30),
+        const SizedBox(width: 30),
         Text(
           'Terms & Conditions',
           style: GoogleFonts.openSans(
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(width: 30),
+        const SizedBox(width: 30),
         Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(

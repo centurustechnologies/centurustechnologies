@@ -3,8 +3,6 @@ import 'package:centurus_web_app/view/header_widget.dart';
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/footer.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
-import 'package:centurus_web_app/view/helpers/app_constants.dart';
-import 'package:centurus_web_app/view/helpers/banners.dart';
 import 'package:centurus_web_app/view/viewus/helper/experience.dart';
 import 'package:flutter/material.dart';
 
