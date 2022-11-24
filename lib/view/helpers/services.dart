@@ -17,139 +17,140 @@ servicesDesktopMethod(BuildContext context) {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-                //height: 616,
-                //padding:EdgeInsets.fromLTRB(0, 30, 0, 0),
-                width: 440,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                  vertical: 40,
-                ),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Colors.white),
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  spreadRadius: 1,
-                                  blurRadius: 10),
-                            ],
-                            shape: BoxShape.circle,
-                            color: const Color.fromARGB(255, 201, 221, 238)),
-                        child: Image.asset(
-                          'assets/house2.png',
-                          fit: BoxFit.cover,
-                          height: 35,
-                          width: 35,
-                        ),
+              //height: 616,
+              //padding:EdgeInsets.fromLTRB(0, 30, 0, 0),
+              width: 440,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 30,
+                vertical: 40,
+              ),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12), color: Colors.white),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 1,
+                              blurRadius: 10),
+                        ],
+                        shape: BoxShape.circle,
+                        color: const Color.fromARGB(255, 201, 221, 238)),
+                    child: Image.asset(
+                      'assets/house2.png',
+                      fit: BoxFit.cover,
+                      height: 35,
+                      width: 35,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 18,
+                  ),
+                  Text(
+                    'Web Development',
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 11,
+                  ),
+                  SizedBox(
+                    width: width / 4,
+                    child: Text(
+                      'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey,
+                        fontSize: 14,
                       ),
-                      const SizedBox(
-                        height: 18,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 14,
+                  ),
+                  SizedBox(
+                    width: width / 4,
+                    child: Text(
+                      'Professionally architect unique process improvements via optimal.',
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey,
+                        fontSize: 14,
                       ),
-                      Text(
-                        'Web Development',
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black,
-                          fontSize: 20,
-                        ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 14,
+                  ),
+                  Text(
+                    'Include with.....',
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w500,
+                      color: const Color.fromARGB(255, 21, 21, 21),
+                      fontSize: 17,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  includeUs(),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  includeUs(),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  includeUs(),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  includeUs(),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  includeUs(),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  includeUs(),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  MaterialButton(
+                    //color: Colors.blue.withOpacity(0.2),
+                    //hoverColor: Colors.blue,
+                    height: 50,
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(
+                        color: Colors.white,
                       ),
-                      const SizedBox(
-                        height: 11,
-                      ),
-                      SizedBox(
-                        width: width / 4,
-                        child: Text(
-                          'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w400,
-                            color: Colors.grey,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      SizedBox(
-                        width: width / 4,
-                        child: Text(
-                          'Professionally architect unique process improvements via optimal.',
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w400,
-                            color: Colors.grey,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Include with.....',
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Text(
+                        'View Details',
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
-                          color: const Color.fromARGB(255, 21, 21, 21),
-                          fontSize: 17,
+                          color: Colors.black,
+                          fontSize: 15,
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      includeUs(),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      includeUs(),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      includeUs(),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      includeUs(),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      includeUs(),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      includeUs(),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      MaterialButton(
-                        //color: Colors.blue.withOpacity(0.2),
-                        //hoverColor: Colors.blue,
-                        height: 50,
-                        shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: Colors.white,
-                          ),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        onPressed: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: Text(
-                            'View Details',
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black,
-                              fontSize: 15,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ])),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(
               width: 35,
             ),
