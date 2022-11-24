@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Centurus Technologies Pvt. Ltd.',
       debugShowCheckedModeBanner: false,
-      home:viewUs()
+      home:Dashboard()
     );
   }
 }

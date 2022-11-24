@@ -10,6 +10,9 @@ import 'package:centurus_web_app/view/navBar/desktop_navBar.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/banners.dart';
+import 'package:centurus_web_app/view/viewus/helper/analytics.dart';
+import 'package:centurus_web_app/view/viewus/helper/contactus2.dart';
+import 'package:centurus_web_app/view/viewus/helper/everything.dart';
 import 'package:centurus_web_app/view/viewus/helper/experience.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -59,6 +62,9 @@ class _DashboardState extends State<viewUs>
               HeaderWidget(width: width, scaffoldKey: scaffoldKey),
               headerTitle(context),
               Experience(context),
+              analytics(context),
+              everything(context),
+              contactUs2(context),
               //servicesDesktopMethod(context),
               //clientSayDesktopMethod(context),
               //ContactUsDesktopMethod(context),

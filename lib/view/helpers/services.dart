@@ -1,5 +1,6 @@
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/onhover.dart';
+import 'package:centurus_web_app/view/viewus/helper/viewus.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_grid_list/responsive_grid_list.dart';
@@ -112,7 +113,14 @@ servicesDesktopMethod(BuildContext context) {
                         ),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+ Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const viewUs()),
+  );  
+
+
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Text(
@@ -260,7 +268,14 @@ var width = MediaQuery.of(context).size.width;
                         ),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const viewUs()),
+  );  
+
+
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Text(
