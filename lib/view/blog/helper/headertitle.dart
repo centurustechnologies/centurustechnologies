@@ -1,6 +1,5 @@
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 headerTitle(BuildContext context) {
@@ -28,7 +27,7 @@ headerTitle(BuildContext context) {
                         color: Colors.white,
                         fontSize: 40),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 9,
               ),
               SizedBox(
@@ -37,13 +36,13 @@ headerTitle(BuildContext context) {
                   'Completely integrate equity invested partnerships without revolutionary systems. Monotonectally network pandemic e-services via bricks-and-clicks information.',
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w400,
-                    color: Color.fromARGB(255, 190, 187, 187),
+                    color: const Color.fromARGB(255, 190, 187, 187),
                     fontSize: 17,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Center(
@@ -55,7 +54,7 @@ headerTitle(BuildContext context) {
                       hoverColor: Colors.blue,
                       height: 50,
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(
+                        side: const BorderSide(
                           color: Colors.blue,
                         ),
                         borderRadius: BorderRadius.circular(5),
@@ -73,15 +72,15 @@ headerTitle(BuildContext context) {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
-                   MaterialButton(
+                    MaterialButton(
                       color: Colors.blue.withOpacity(0.2),
                       hoverColor: Colors.blue,
                       height: 50,
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(
+                        side: const BorderSide(
                           color: Colors.blue,
                         ),
                         borderRadius: BorderRadius.circular(5),

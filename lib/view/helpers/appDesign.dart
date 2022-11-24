@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 appDesignDesktopMethod(BuildContext context) {
-  var width = MediaQuery.of(context).size.width;
+
 
   return Padding(
     padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
@@ -13,7 +11,7 @@ appDesignDesktopMethod(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
+        const SizedBox(
           width: 200,
         ),
         Container(
@@ -23,7 +21,7 @@ appDesignDesktopMethod(BuildContext context) {
             'assets/widget-12.png',
             fit: BoxFit.fill,
           ),
-          decoration: new BoxDecoration(
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
             // image: new DecorationImage(
             //   image: new AssetImage("assets/tab_img1.png"),
@@ -31,17 +29,17 @@ appDesignDesktopMethod(BuildContext context) {
             // ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 70,
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Text(
+            const Text(
               'We are working with ',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
@@ -54,10 +52,10 @@ appDesignDesktopMethod(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            Text(
+            const Text(
               '5+ years exprience',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
@@ -70,10 +68,10 @@ appDesignDesktopMethod(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Text(
+            const Text(
               'Continually network effective bandwidth whereas goal-oriented schemas.',
               style: TextStyle(
                 fontWeight: FontWeight.w300,
@@ -86,10 +84,10 @@ appDesignDesktopMethod(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            Text(
+            const Text(
               'Intrinsicly incentivize corporate synergy with accurate task bricks-and-clicks',
               style: TextStyle(
                 fontWeight: FontWeight.w300,
@@ -97,10 +95,10 @@ appDesignDesktopMethod(BuildContext context) {
                 fontSize: 16,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            Text(
+            const Text(
               'leadership skills.',
               style: TextStyle(
                 fontWeight: FontWeight.w300,
@@ -113,11 +111,11 @@ appDesignDesktopMethod(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
-              children: [
+              children: const [
                 Icon(
                   Icons.check,
                   color: Color.fromARGB(255, 6, 89, 157),
@@ -141,11 +139,11 @@ appDesignDesktopMethod(BuildContext context) {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 6,
             ),
             Row(
-              children: [
+              children: const [
                 Icon(
                   Icons.check,
                   color: Color.fromARGB(255, 6, 89, 157),
@@ -169,11 +167,11 @@ appDesignDesktopMethod(BuildContext context) {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 6,
             ),
             Row(
-              children: [
+              children: const [
                 Icon(
                   Icons.check,
                   color: Color.fromARGB(255, 6, 89, 157),
@@ -219,21 +217,21 @@ appDesignMobileMethod(BuildContext context) {
               'assets/widget-12.png',
               fit: BoxFit.fill,
             ),
-            decoration: new BoxDecoration(
+            decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
               //image: new DecorationImage(
               // image: new AssetImage("assets/tab_img1.png"),
               // fit: BoxFit.fill,
               //)
             )),
-        SizedBox(
+        const SizedBox(
           height: 25,
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'We are working with 5+ years exprience',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
@@ -246,17 +244,17 @@ appDesignMobileMethod(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 10, 0),
               child: SizedBox(
                 width: width,
-                child: Text(
+                child: const Text(
                   'Continually network effective bandwidth whereas goal -oriented schemas.Intrinsicly incentivize corporate synergy with accurate task bricks-and-clicks leadership skills.',
                   style: TextStyle(
                     height: 1.2,
@@ -272,13 +270,13 @@ appDesignMobileMethod(BuildContext context) {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Column(
@@ -288,7 +286,7 @@ appDesignMobileMethod(BuildContext context) {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 15,
                     ),
@@ -315,13 +313,13 @@ appDesignMobileMethod(BuildContext context) {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 6,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 15,
                     ),
@@ -348,11 +346,11 @@ appDesignMobileMethod(BuildContext context) {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 6,
                 ),
                 Row(
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 15,
                     ),

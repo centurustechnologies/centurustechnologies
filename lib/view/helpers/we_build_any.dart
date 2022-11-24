@@ -1,14 +1,12 @@
-import 'package:centurus_web_app/view/helpers/banners.dart';
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: non_constant_identifier_names
 
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_launcher_icons/xml_templates.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 WeBuildAnyDesktopMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
-  var tabController;
+ 
   return Container(
     height: 250,
     width: width,
@@ -17,7 +15,7 @@ WeBuildAnyDesktopMethod(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
         Text(
@@ -48,7 +46,7 @@ WeBuildAnyDesktopMethod(BuildContext context) {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 18.0,
         ),
         Text(
@@ -65,7 +63,7 @@ WeBuildAnyDesktopMethod(BuildContext context) {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text(
@@ -89,15 +87,15 @@ WeBuildAnyDesktopMethod(BuildContext context) {
 
 WeBuildAnyMobileMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
-  return  Container(
-    padding: EdgeInsets.all(10),
+  return Container(
+    padding: const EdgeInsets.all(10),
     width: width,
     color: const Color(0xff161D42),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
         Text(
@@ -128,7 +126,7 @@ WeBuildAnyMobileMethod(BuildContext context) {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 18.0,
         ),
         Text(
@@ -143,14 +141,13 @@ WeBuildAnyMobileMethod(BuildContext context) {
                 blurRadius: 1,
               ),
             ],
-          ),textAlign: TextAlign.center,
+          ),
+          textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
-        
       ],
     ),
   );
-  }
-
+}

@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 
-
 class OnHover extends StatefulWidget {
-final Widget Function(bool isHovered) builder;
+  final Widget Function(bool isHovered) builder;
 
   const OnHover({Key? key, required this.builder}) : super(key: key);
 
@@ -12,33 +10,27 @@ final Widget Function(bool isHovered) builder;
 }
 
 class _OnHoverState extends State<OnHover> {
-bool isHovered=false;
+  bool isHovered = false;
 
   @override
   Widget build(BuildContext context) {
-
-    final hovered=Matrix4.identity()..scale(1.01);
-    final transform=isHovered? hovered:Matrix4.identity();
-
+    final hovered = Matrix4.identity()..scale(1.01);
+    final transform = isHovered ? hovered : Matrix4.identity();
 
     return MouseRegion(
       onEnter: (event) => onEntered(true),
       onExit: (event) => onEntered(false),
-      child: AnimatedContainer(duration: Duration(milliseconds: 300),
-      transform: transform,
-      child: widget.builder(isHovered),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        transform: transform,
+        child: widget.builder(isHovered),
       ),
-
     );
-
-
   }
-void onEntered(bool isHovered){
-setState(() {
-  this.isHovered=isHovered;
-});
 
-
-}
-
+  void onEntered(bool isHovered) {
+    setState(() {
+      this.isHovered = isHovered;
+    });
+  }
 }

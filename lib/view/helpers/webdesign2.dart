@@ -1,26 +1,26 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 WEbDEsign2(BuildContext context) {
-  var width = MediaQuery.of(context).size.width;
-  
+
   return Padding(
     padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
+        const SizedBox(
           width: 200,
         ),
         Container(
           height: 390,
           width: 390,
-          child: Image.asset('assets/tab_img1.png',fit: BoxFit.fill,),
-          decoration: new BoxDecoration(
+          child: Image.asset(
+            'assets/tab_img1.png',
+            fit: BoxFit.fill,
+          ),
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
             // image: new DecorationImage(
             //   image: new AssetImage("assets/tab_img1.png"),
@@ -28,17 +28,17 @@ WEbDEsign2(BuildContext context) {
             // ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 70,
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Text(
+            const Text(
               'We are working with ',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
@@ -51,10 +51,10 @@ WEbDEsign2(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            Text(
+            const Text(
               '5+ years exprience',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
@@ -67,10 +67,10 @@ WEbDEsign2(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Text(
+            const Text(
               'Continually network effective bandwidth whereas goal-oriented schemas.',
               style: TextStyle(
                 fontWeight: FontWeight.w300,
@@ -83,10 +83,10 @@ WEbDEsign2(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            Text(
+            const Text(
               'Intrinsicly incentivize corporate synergy with accurate task bricks-and-clicks',
               style: TextStyle(
                 fontWeight: FontWeight.w300,
@@ -94,10 +94,10 @@ WEbDEsign2(BuildContext context) {
                 fontSize: 16,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            Text(
+            const Text(
               'leadership skills.',
               style: TextStyle(
                 fontWeight: FontWeight.w300,
@@ -110,11 +110,11 @@ WEbDEsign2(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
-              children: [
+              children: const [
                 Icon(
                   Icons.check,
                   color: Color.fromARGB(255, 6, 89, 157),
@@ -138,11 +138,11 @@ WEbDEsign2(BuildContext context) {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 6,
             ),
             Row(
-              children: [
+              children: const [
                 Icon(
                   Icons.check,
                   color: Color.fromARGB(255, 6, 89, 157),
@@ -166,11 +166,11 @@ WEbDEsign2(BuildContext context) {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 6,
             ),
             Row(
-              children: [
+              children: const [
                 Icon(
                   Icons.check,
                   color: Color.fromARGB(255, 6, 89, 157),
@@ -212,20 +212,20 @@ WEbDEsign2MobileMethod(BuildContext context) {
         Container(
             height: 150,
             width: 150,
-            decoration: new BoxDecoration(
+            decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                image: new DecorationImage(
-                  image: new AssetImage("assets/tab_img1.png"),
+                image: const DecorationImage(
+                  image: AssetImage("assets/tab_img1.png"),
                   fit: BoxFit.fill,
                 ))),
-        SizedBox(
+        const SizedBox(
           height: 25,
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'We are working with 5+ years exprience',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
@@ -238,17 +238,17 @@ WEbDEsign2MobileMethod(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 10, 0),
               child: SizedBox(
                 width: width,
-                child: Text(
+                child: const Text(
                   'Continually network effective bandwidth whereas goal -oriented schemas.Intrinsicly incentivize corporate synergy with accurate task bricks-and-clicks leadership skills.',
                   style: TextStyle(
                     height: 1.2,
@@ -264,13 +264,13 @@ WEbDEsign2MobileMethod(BuildContext context) {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Column(
@@ -280,7 +280,7 @@ WEbDEsign2MobileMethod(BuildContext context) {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 15,
                     ),
@@ -307,13 +307,13 @@ WEbDEsign2MobileMethod(BuildContext context) {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 6,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 15,
                     ),
@@ -340,11 +340,11 @@ WEbDEsign2MobileMethod(BuildContext context) {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 6,
                 ),
                 Row(
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 15,
                     ),

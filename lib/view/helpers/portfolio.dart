@@ -1,8 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_launcher_icons/xml_templates.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
 portFolioDesktopMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
@@ -14,7 +13,7 @@ portFolioDesktopMethod(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 80,
         ),
         Text(
@@ -25,7 +24,7 @@ portFolioDesktopMethod(BuildContext context) {
             fontSize: 18,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Text(
@@ -36,29 +35,29 @@ portFolioDesktopMethod(BuildContext context) {
             fontSize: 37,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Text(
           'Intrinsicly strategize cutting-edge before interoperable applications incubate',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w300,
-            color: Color.fromARGB(255, 98, 96, 96),
+            color: const Color.fromARGB(255, 98, 96, 96),
             fontSize: 17,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text(
           'extensive expertise through integrated intellectual capital.',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w300,
-            color: Color.fromARGB(255, 15, 15, 15),
+            color: const Color.fromARGB(255, 15, 15, 15),
             fontSize: 17,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 100,
         ),
         CarouselSlider(
@@ -70,33 +69,34 @@ portFolioDesktopMethod(BuildContext context) {
               aspectRatio: 1.0,
               initialPage: 0,
               pauseAutoPlayInFiniteScroll: true,
-              autoPlayInterval: Duration(seconds: 2),
+              autoPlayInterval: const Duration(seconds: 2),
               autoPlay: true),
-          items: _Source.map((i) {
-            return Builder(
-              builder: (BuildContext context) {
-                return Container(
-                  child: Image.asset(i),
-                );
-              },
-            );
-          }).toList(),
+          items: source.map(
+            (i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Image.asset(i);
+                },
+              );
+            },
+          ).toList(),
         )
       ],
     ),
   );
 }
+
 portFolioMobileMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
     width: width,
-    padding: EdgeInsets.all(10),
+    padding: const EdgeInsets.all(10),
     color: hoverColor,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Text(
@@ -107,7 +107,7 @@ portFolioMobileMethod(BuildContext context) {
             fontSize: 18,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Text(
@@ -118,23 +118,22 @@ portFolioMobileMethod(BuildContext context) {
             fontSize: 23,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SizedBox(
-          width: width/1.2,
+          width: width / 1.2,
           child: Text(
             'Intrinsicly strategize cutting-edge before interoperable applications incubate extensive expertise through integrated intellectual capital.',
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w300,
-              color: Color.fromARGB(255, 98, 96, 96),
+              color: const Color.fromARGB(255, 98, 96, 96),
               fontSize: 17,
             ),
             textAlign: TextAlign.center,
           ),
         ),
-      
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         CarouselSlider(
@@ -146,33 +145,34 @@ portFolioMobileMethod(BuildContext context) {
               aspectRatio: 1.0,
               initialPage: 0,
               pauseAutoPlayInFiniteScroll: true,
-              autoPlayInterval: Duration(seconds: 2),
+              autoPlayInterval: const Duration(seconds: 2),
               autoPlay: true),
-          items: _Source.map((i) {
-            return Builder(
-              builder: (BuildContext context) {
-                return Container(
-                  child: Image.asset(i),
-                );
-              },
-            );
-          }).toList(),
+          items: source.map(
+            (i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Image.asset(i);
+                },
+              );
+            },
+          ).toList(),
         )
       ],
     ),
   );
 }
+
 portFolioTabletMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
     width: width,
-    padding: EdgeInsets.all(10),
+    padding: const EdgeInsets.all(10),
     color: hoverColor,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Text(
@@ -183,7 +183,7 @@ portFolioTabletMethod(BuildContext context) {
             fontSize: 18,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Text(
@@ -194,51 +194,52 @@ portFolioTabletMethod(BuildContext context) {
             fontSize: 23,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SizedBox(
-          width: width/1.2,
+          width: width / 1.2,
           child: Text(
             'Intrinsicly strategize cutting-edge before interoperable applications incubate extensive expertise through integrated intellectual capital.',
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w300,
-              color: Color.fromARGB(255, 98, 96, 96),
+              color: const Color.fromARGB(255, 98, 96, 96),
               fontSize: 17,
             ),
             textAlign: TextAlign.center,
           ),
         ),
-      
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         CarouselSlider(
           options: CarouselOptions(
-              height: 200,
-              enlargeCenterPage: true,
-              enableInfiniteScroll: true,
-              viewportFraction: 0.3,
-              aspectRatio: 1.0,
-              initialPage: 0,
-              pauseAutoPlayInFiniteScroll: true,
-              autoPlayInterval: Duration(seconds: 2),
-              autoPlay: true),
-          items: _Source.map((i) {
-            return Builder(
-              builder: (BuildContext context) {
-                return Container(
-                  child: Image.asset(i),
-                );
-              },
-            );
-          }).toList(),
+            height: 200,
+            enlargeCenterPage: true,
+            enableInfiniteScroll: true,
+            viewportFraction: 0.3,
+            aspectRatio: 1.0,
+            initialPage: 0,
+            pauseAutoPlayInFiniteScroll: true,
+            autoPlayInterval: const Duration(seconds: 2),
+            autoPlay: true,
+          ),
+          items: source.map(
+            (i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Image.asset(i);
+                },
+              );
+            },
+          ).toList(),
         )
       ],
     ),
   );
 }
-final List _Source = [
+
+final List source = [
   'assets/webde.jpg',
   'assets/webde.jpg',
   'assets/webde.jpg',

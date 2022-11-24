@@ -2,7 +2,7 @@ import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-whyChooseUsDesktopMethod(BuildContext context) {
+whyChooseUsDesktopMethod(BuildContext context, year) {
   var width = MediaQuery.of(context).size.width;
   return Padding(
     padding: const EdgeInsets.all(30),
@@ -48,7 +48,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
               SizedBox(
                 width: width / 2.5,
                 child: Text(
-                  'We are working with 5+ years exprience',
+                  'We are working with $year+ years exprience',
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.bold,
                     fontSize: 50,
@@ -61,13 +61,13 @@ whyChooseUsDesktopMethod(BuildContext context) {
               SizedBox(
                 width: width / 2.2,
                 child: Text(
-                  'We Centurus Technologies working from last 5+ years in IT Sector and providing high level of app & web development and design over the world. Developed more than 200+ projects in web and android, ios apps.',
+                  'We Centurus Technologies working from last $year+ years in IT Sector and providing high level of app & web development and design over the world. Developed more than 200+ projects in web and android, ios apps.',
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               Row(
@@ -89,11 +89,11 @@ whyChooseUsDesktopMethod(BuildContext context) {
                                 spreadRadius: 1,
                               ),
                             ],
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage('assets/pie1.png'),
                                 fit: BoxFit.cover),
                           )),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       Text(
@@ -106,7 +106,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 18,
                   ),
                   Row(
@@ -124,11 +124,11 @@ whyChooseUsDesktopMethod(BuildContext context) {
                                 color: Colors.grey,
                               ),
                             ],
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage('assets/pie2.png'),
                                 fit: BoxFit.cover)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       Text(
@@ -143,7 +143,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
               Row(
@@ -160,14 +160,15 @@ whyChooseUsDesktopMethod(BuildContext context) {
                             width: 18,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 134, 193, 242)),
-                            child: Icon(
+                                color:
+                                    const Color.fromARGB(255, 134, 193, 242)),
+                            child: const Icon(
                               Icons.check,
                               color: Colors.black,
                               size: 14.0,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           Text(
@@ -180,7 +181,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Row(
@@ -190,14 +191,15 @@ whyChooseUsDesktopMethod(BuildContext context) {
                             width: 18,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 134, 193, 242)),
-                            child: Icon(
+                                color:
+                                    const Color.fromARGB(255, 134, 193, 242)),
+                            child: const Icon(
                               Icons.check,
                               color: Colors.black,
                               size: 14.0,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           Text(
@@ -210,7 +212,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Row(
@@ -220,14 +222,15 @@ whyChooseUsDesktopMethod(BuildContext context) {
                             width: 18,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 134, 193, 242)),
-                            child: Icon(
+                                color:
+                                    const Color.fromARGB(255, 134, 193, 242)),
+                            child: const Icon(
                               Icons.check,
                               color: Colors.black,
                               size: 14.0,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           Text(
@@ -242,7 +245,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 85,
                   ),
                   Column(
@@ -255,14 +258,15 @@ whyChooseUsDesktopMethod(BuildContext context) {
                             width: 18,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 134, 193, 242)),
-                            child: Icon(
+                                color:
+                                    const Color.fromARGB(255, 134, 193, 242)),
+                            child: const Icon(
                               Icons.check,
                               color: Colors.black,
                               size: 14.0,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           Text(
@@ -275,7 +279,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Row(
@@ -285,14 +289,15 @@ whyChooseUsDesktopMethod(BuildContext context) {
                             width: 18,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 134, 193, 242)),
-                            child: Icon(
+                                color:
+                                    const Color.fromARGB(255, 134, 193, 242)),
+                            child: const Icon(
                               Icons.check,
                               color: Colors.black,
                               size: 14.0,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           Text(
@@ -305,7 +310,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Row(
@@ -315,14 +320,15 @@ whyChooseUsDesktopMethod(BuildContext context) {
                             width: 18,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 134, 193, 242)),
-                            child: Icon(
+                                color:
+                                    const Color.fromARGB(255, 134, 193, 242)),
+                            child: const Icon(
                               Icons.check,
                               color: Colors.black,
                               size: 14.0,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           Text(
@@ -362,7 +368,7 @@ whyChooseUsDesktopMethod(BuildContext context) {
   );
 }
 
-whyChooseUsTabletMethod(BuildContext context) {
+whyChooseUsTabletMethod(BuildContext context, year) {
   var width = MediaQuery.of(context).size.width;
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
@@ -408,7 +414,7 @@ whyChooseUsTabletMethod(BuildContext context) {
               SizedBox(
                 width: width / 2.5,
                 child: Text(
-                  'We are working with 5+ years exprience',
+                  'We are working with $year+ years exprience',
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
@@ -421,7 +427,7 @@ whyChooseUsTabletMethod(BuildContext context) {
               SizedBox(
                 width: width / 2.5,
                 child: Text(
-                  'We Centurus Technologies working from last 5+ years in IT Sector and providing high level of app & web development and design over the world. Developed more than 200+ projects in web and android, ios apps.',
+                  'We Centurus Technologies working from last $year+ years in IT Sector and providing high level of app & web development and design over the world. Developed more than 200+ projects in web and android, ios apps.',
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w600,
                   ),
@@ -447,11 +453,11 @@ whyChooseUsTabletMethod(BuildContext context) {
                                 spreadRadius: 1,
                               ),
                             ],
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage('assets/pie1.png'),
                                 fit: BoxFit.cover),
                           )),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       Text(
@@ -464,7 +470,7 @@ whyChooseUsTabletMethod(BuildContext context) {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 18,
                   ),
                   Row(
@@ -482,11 +488,11 @@ whyChooseUsTabletMethod(BuildContext context) {
                                 color: Colors.grey,
                               ),
                             ],
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage('assets/pie2.png'),
                                 fit: BoxFit.cover)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       Text(
@@ -523,7 +529,7 @@ whyChooseUsTabletMethod(BuildContext context) {
   );
 }
 
-whyChooseUsMobileMethod(BuildContext context) {
+whyChooseUsMobileMethod(BuildContext context, year) {
   var width = MediaQuery.of(context).size.width;
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
@@ -569,7 +575,7 @@ whyChooseUsMobileMethod(BuildContext context) {
               ),
               const SizedBox(height: 20),
               Text(
-                'We are working with 5+ years exprience',
+                'We are working with $year+ years exprience',
                 style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
@@ -579,7 +585,7 @@ whyChooseUsMobileMethod(BuildContext context) {
               ),
               const SizedBox(height: 10),
               Text(
-                'We Centurus Technologies working from last 5+ years in IT Sector and providing high level of app & web development and design over the world. Developed more than 200+ projects in web and android, ios apps.',
+                'We Centurus Technologies working from last $year+ years in IT Sector and providing high level of app & web development and design over the world. Developed more than 200+ projects in web and android, ios apps.',
                 style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w600,
                 ),
