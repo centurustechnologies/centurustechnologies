@@ -1,13 +1,11 @@
 import 'dart:developer';
-import 'dart:html';
 
 import 'package:centurus_web_app/view/blog/helper/headertitle.dart';
-import 'package:centurus_web_app/view/career/helper/jobs.dart';
-import 'package:centurus_web_app/view/career/helper/whyjoinus.dart';
-import 'package:centurus_web_app/view/contact_us_screen.dart';
 import 'package:centurus_web_app/view/header_widget.dart';
+import 'package:centurus_web_app/view/helpers/clientsay.dart';
 import 'package:centurus_web_app/view/helpers/contactus.dart';
 import 'package:centurus_web_app/view/helpers/footer.dart';
+import 'package:centurus_web_app/view/helpers/services.dart';
 import 'package:centurus_web_app/view/navBar/desktop_navBar.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
@@ -18,14 +16,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class career extends StatefulWidget {
-  const career({Key? key}) : super(key: key);
+
+class ourServices extends StatefulWidget {
+  const ourServices({Key? key}) : super(key: key);
 
   @override
-  State<career> createState() => _DashboardState();
+  State<ourServices> createState() => _DashboardState();
 }
 
-class _DashboardState extends State<career>
+class _DashboardState extends State<ourServices>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -53,11 +52,10 @@ class _DashboardState extends State<career>
             children: [
               HeaderWidget(width: width, scaffoldKey: scaffoldKey),
               headerTitle(context),
-              jobs(context),
-              //contactUsScreen(),
-              whyJoinUs(context),
+              servicesDesktopMethod(context),
+              clientSayDesktopMethod(context),
               ContactUsDesktopMethod(context),
-              Footer(context, whiteColor, mainColor),
+              Footer(context,whiteColor,mainColor),
             ],
           ),
         ),

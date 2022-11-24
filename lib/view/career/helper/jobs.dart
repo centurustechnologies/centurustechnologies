@@ -60,7 +60,7 @@ jobs(BuildContext context) {
             listViewBuilderOptions: ListViewBuilderOptions(
                 shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
             horizontalGridSpacing: 30,
-            horizontalGridMargin: 100,
+            horizontalGridMargin: 70,
             verticalGridMargin: 50,
             minItemWidth: 200,
             minItemsPerRow: 1,
@@ -104,16 +104,23 @@ _blog2(BuildContext context) {
                   SizedBox(
                     height: 13,
                   ),
-                  SizedBox(
-                    width: width / 4.7,
-                    child: Text(
-                      'Remote-Full-Time',
-                      style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w400,
-                        color: Color.fromARGB(255, 206, 201, 201),
-                        fontSize: 15,
+                  Row(
+                    children: [
+                      Container(height: 20,width: 20,  decoration: BoxDecoration( image: DecorationImage(
+                                  image: AssetImage('assets/purse.png'),
+                                   fit: BoxFit.cover))),SizedBox(width: 6,),
+                      SizedBox(
+                        width: width / 4.7,
+                        child: Text(
+                          'Remote-Full-Time',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 206, 201, 201),
+                            fontSize: 15,
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                   SizedBox(
                     height: 10,
@@ -136,35 +143,54 @@ _blog2(BuildContext context) {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Centurus',
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 206, 201, 201),
-                          fontSize: 15,
-                        ),
+                      Row(
+                        children: [  Container(height: 20,width: 20,  decoration: BoxDecoration( image: DecorationImage(
+                                  image: AssetImage('assets/apartment.png'),
+                                   fit: BoxFit.cover))),SizedBox(width: 6,),
+                          Text(
+                            'Centurus',
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromARGB(255, 206, 201, 201),
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(
                         width: 13,
                       ),
-                      Text(
-                        'Ludhiana',
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 206, 201, 201),
-                          fontSize: 15,
-                        ),
+                      Row(
+                         children: [  Container(height: 20,width: 20,  decoration: BoxDecoration( image: DecorationImage(
+                                 image: AssetImage('assets/location.png'),
+                                 fit: BoxFit.cover))),SizedBox(width: 6,),
+                                   //Icon(Icons.location_disabled_rounded,color: Colors.white,),
+                          Text(
+                            'Ludhiana',
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromARGB(255, 206, 201, 201),
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(
                         width: 13,
                       ),
-                      Text(
-                        '35 Thousands',
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 206, 201, 201),
-                          fontSize: 15,
-                        ),
+                      Row(
+                        children: [Container(height: 20,width: 20,  decoration: BoxDecoration( image: DecorationImage(
+                                 image: AssetImage('assets/wallet.png'),
+                                 fit: BoxFit.cover))),SizedBox(width: 6,),
+                          Text(
+                            '(35-55)k',
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromARGB(255, 206, 201, 201),
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       )
                     ],
                   ),
