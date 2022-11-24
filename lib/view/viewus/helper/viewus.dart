@@ -3,8 +3,14 @@ import 'package:centurus_web_app/view/header_widget.dart';
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/footer.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
+import 'package:centurus_web_app/view/helpers/app_constants.dart';
+import 'package:centurus_web_app/view/helpers/banners.dart';
 import 'package:centurus_web_app/view/viewus/helper/experience.dart';
 import 'package:flutter/material.dart';
+
+import 'analytics.dart';
+import 'contactus2.dart';
+import 'everything.dart';
 
 class ViewUs extends StatefulWidget {
   const ViewUs({Key? key}) : super(key: key);
@@ -40,6 +46,9 @@ class _DashboardState extends State<ViewUs>
               HeaderWidget(width: width, scaffoldKey: scaffoldKey),
               headerTitle(context),
               Experience(context),
+              analytics(context),
+              everything(context),
+              contactUs2(context),
               //servicesDesktopMethod(context),
               //clientSayDesktopMethod(context),
               //ContactUsDesktopMethod(context),

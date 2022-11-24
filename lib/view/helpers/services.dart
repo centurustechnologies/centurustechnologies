@@ -1,5 +1,6 @@
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/onhover.dart';
+import 'package:centurus_web_app/view/viewus/helper/viewus.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_grid_list/responsive_grid_list.dart';
@@ -17,140 +18,139 @@ servicesDesktopMethod(BuildContext context) {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              //height: 616,
-              //padding:EdgeInsets.fromLTRB(0, 30, 0, 0),
-              width: 440,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 30,
-                vertical: 40,
-              ),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12), color: Colors.white),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              spreadRadius: 1,
-                              blurRadius: 10),
-                        ],
-                        shape: BoxShape.circle,
-                        color: const Color.fromARGB(255, 201, 221, 238)),
-                    child: Image.asset(
-                      'assets/house2.png',
-                      fit: BoxFit.cover,
-                      height: 35,
-                      width: 35,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 18,
-                  ),
-                  Text(
-                    'Web Development',
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                      fontSize: 20,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 11,
-                  ),
-                  SizedBox(
-                    width: width / 4,
-                    child: Text(
-                      'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
-                      style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w400,
-                        color: Colors.grey,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 14,
-                  ),
-                  SizedBox(
-                    width: width / 4,
-                    child: Text(
-                      'Professionally architect unique process improvements via optimal.',
-                      style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w400,
-                        color: Colors.grey,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 14,
-                  ),
-                  Text(
-                    'Include with.....',
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w500,
-                      color: const Color.fromARGB(255, 21, 21, 21),
-                      fontSize: 17,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  includeUs(),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  includeUs(),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  includeUs(),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  includeUs(),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  includeUs(),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  includeUs(),
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  MaterialButton(
-                    //color: Colors.blue.withOpacity(0.2),
-                    //hoverColor: Colors.blue,
-                    height: 50,
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    onPressed: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Text(
-                        'View Details',
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
-                          fontSize: 15,
+                //height: 616,
+                //padding:EdgeInsets.fromLTRB(0, 30, 0, 0),
+                width: 440,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 30,
+                  vertical: 40,
+                ),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.white),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  spreadRadius: 1,
+                                  blurRadius: 10),
+                            ],
+                            shape: BoxShape.circle,
+                            color: const Color.fromARGB(255, 201, 221, 238)),
+                        child: Image.asset(
+                          'assets/house2.png',
+                          fit: BoxFit.cover,
+                          height: 35,
+                          width: 35,
                         ),
                       ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      Text(
+                        'Web Development',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 11,
+                      ),
+                      SizedBox(
+                        width: width / 4,
+                        child: Text(
+                          'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w400,
+                            color: Colors.grey,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      SizedBox(
+                        width: width / 4,
+                        child: Text(
+                          'Professionally architect unique process improvements via optimal.',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w400,
+                            color: Colors.grey,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        'Include with.....',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w500,
+                          color: const Color.fromARGB(255, 21, 21, 21),
+                          fontSize: 17,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      MaterialButton(
+                        //color: Colors.blue.withOpacity(0.2),
+                        //hoverColor: Colors.blue,
+                        height: 50,
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(
+                            color: Colors.white,
+                          ),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        onPressed: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            'View Details',
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ])),
             const SizedBox(
               width: 35,
             ),
@@ -231,16 +231,13 @@ child2(BuildContext context) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    spreadRadius: 1,
-                    blurRadius: 10),
-              ],
-              shape: BoxShape.circle,
-              color: const Color.fromARGB(255, 201, 221, 238)),
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                spreadRadius: 1,
+                blurRadius: 10),
+          ], shape: BoxShape.circle, color: Color.fromARGB(255, 201, 221, 238)),
           child: Image.asset(
             'assets/house2.png',
             fit: BoxFit.cover,
@@ -248,7 +245,7 @@ child2(BuildContext context) {
             width: 35,
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 18,
         ),
         Text(
@@ -259,7 +256,7 @@ child2(BuildContext context) {
             fontSize: 20,
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 11,
         ),
         SizedBox(
@@ -273,7 +270,7 @@ child2(BuildContext context) {
             ),
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 10,
         ),
         MaterialButton(
@@ -281,7 +278,7 @@ child2(BuildContext context) {
           // hoverColor: Colors.blue,
           height: 50,
           shape: RoundedRectangleBorder(
-            side: const BorderSide(
+            side: BorderSide(
               color: Colors.white,
             ),
             borderRadius: BorderRadius.circular(5),

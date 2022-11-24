@@ -130,10 +130,14 @@ class _DashboardState extends State<Dashboard>
               tablet: clientSayTabletMethod(context),
               desktop: clientSayDesktopMethod(context),
             ),
-            ScreenTypeLayout(
-              mobile: servicesMobileMethod(context),
-              //tablet: whyChooseUsTabletMethod(context),
-              desktop: servicesDesktopMethod(context),
+            Column(
+              children: [
+                ScreenTypeLayout(
+                  mobile: servicesMobileMethod(context),
+                  //tablet: whyChooseUsTabletMethod(context),
+                  desktop: servicesDesktopMethod(context),
+                ),
+              ],
             ),
             ScreenTypeLayout(
               mobile: ContactUsMobileMethod(context),
