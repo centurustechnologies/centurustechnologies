@@ -5,6 +5,7 @@ import 'package:centurus_web_app/view/contact_us_screen.dart';
 import 'package:centurus_web_app/view/dashboard.dart';
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/ourservices/helper/ourservices.dart';
+import 'package:centurus_web_app/view/viewus/helper/viewus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Centurus Technologies Pvt. Ltd.',
       debugShowCheckedModeBanner: false,
-      home:ourServices()
+      home:viewUs()
     );
   }
 }
