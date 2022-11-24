@@ -47,10 +47,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Container(
               width: width,
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: showHome ? mainColor : hoverColor,
               ),
@@ -77,10 +77,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Container(
               width: width,
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: showAboutUs ? mainColor : hoverColor,
               ),
@@ -106,10 +106,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Container(
               width: width,
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: showOurServices ? mainColor : hoverColor,
               ),
@@ -135,10 +135,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Container(
               width: width,
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: showPrivacyPolicy ? mainColor : hoverColor,
               ),
@@ -164,10 +164,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Container(
               width: width,
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: showTermsConditions ? mainColor : hoverColor,
               ),

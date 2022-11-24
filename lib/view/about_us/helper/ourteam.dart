@@ -7,10 +7,10 @@ import '../../helpers/onhover.dart';
 
 ourTeamDesktopMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
-  var height = MediaQuery.of(context).size.height;
+
   return Container(
     width: width,
-    padding: EdgeInsets.all(10),
+    padding: const EdgeInsets.all(10),
     color: Colors.white,
     child: Padding(
       padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
@@ -32,7 +32,7 @@ ourTeamDesktopMethod(BuildContext context) {
               fontSize: 38,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 14,
           ),
           SizedBox(
@@ -41,7 +41,7 @@ ourTeamDesktopMethod(BuildContext context) {
               'Intrinsicly strategize cutting-edge before interoperable applications incubate extensive expertise through integrated intellectual capital.',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w400,
-                color: Color.fromARGB(255, 89, 87, 87),
+                color: const Color.fromARGB(255, 89, 87, 87),
                 fontSize: 15,
               ),
               textAlign: TextAlign.center,
@@ -50,7 +50,8 @@ ourTeamDesktopMethod(BuildContext context) {
           SingleChildScrollView(
             child: ResponsiveGridList(
               listViewBuilderOptions: ListViewBuilderOptions(
-                  shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics()),
               horizontalGridSpacing: 30,
               horizontalGridMargin: 100,
               verticalGridMargin: 50,
@@ -82,11 +83,11 @@ _ourWork() {
             height: 300,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
+                image: const DecorationImage(
                     image: AssetImage('assets/blog-2.jpg'), fit: BoxFit.cover)),
           );
         }),
-        SizedBox(
+        const SizedBox(
           height: 14,
         ),
         Text(
@@ -97,7 +98,7 @@ _ourWork() {
             fontSize: 16,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text(

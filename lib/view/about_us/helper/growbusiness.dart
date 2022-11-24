@@ -6,7 +6,7 @@ import 'package:responsive_grid_list/responsive_grid_list.dart';
 growBussinessDesktopMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   var height = MediaQuery.of(context).size.height;
-  var orientation;
+
   return Column(children: [
     Stack(children: [
       Column(children: [
@@ -35,7 +35,7 @@ growBussinessDesktopMethod(BuildContext context) {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     SizedBox(
@@ -49,7 +49,7 @@ growBussinessDesktopMethod(BuildContext context) {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Row(
@@ -77,14 +77,14 @@ growBussinessDesktopMethod(BuildContext context) {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         Container(
                           height: 50,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Color.fromARGB(255, 2, 50, 90),
+                            color: const Color.fromARGB(255, 2, 50, 90),
                           ),
                           child: MaterialButton(
                             onPressed: () {},
@@ -106,7 +106,7 @@ growBussinessDesktopMethod(BuildContext context) {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 100,
                 ),
                 Container(
@@ -115,7 +115,7 @@ growBussinessDesktopMethod(BuildContext context) {
                   decoration: BoxDecoration(
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(20),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                           image: AssetImage('assets/ttt2.jpg'),
                           fit: BoxFit.cover)),
                 )
@@ -125,7 +125,7 @@ growBussinessDesktopMethod(BuildContext context) {
         ),
         Container(
           // height: 1000,
-          padding: EdgeInsets.symmetric(vertical: 30),
+          padding: const EdgeInsets.symmetric(vertical: 30),
           width: width,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(100, 300, 0, 0),
@@ -328,7 +328,7 @@ growBussinessDesktopMethod(BuildContext context) {
                     ], // The list of widgets in the list
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 100,
                 ),
                 Column(
@@ -357,7 +357,7 @@ growBussinessDesktopMethod(BuildContext context) {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     SizedBox(
@@ -366,12 +366,12 @@ growBussinessDesktopMethod(BuildContext context) {
                         'Globally e-enable principle-centered e-business before dynamic quality vectors cross-media materials before proactive outsourcing leverage others vertical technology leadership.',
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 93, 91, 91),
+                          color: const Color.fromARGB(255, 93, 91, 91),
                           fontSize: 16,
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text(
@@ -382,7 +382,7 @@ growBussinessDesktopMethod(BuildContext context) {
                         fontSize: 20,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Row(
@@ -394,11 +394,11 @@ growBussinessDesktopMethod(BuildContext context) {
                           width: 100,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                   image: AssetImage('assets/bmw.png'),
                                   fit: BoxFit.cover)),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 40,
                         ),
                         Container(
@@ -406,7 +406,7 @@ growBussinessDesktopMethod(BuildContext context) {
                           width: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(0),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                   image: AssetImage('assets/mahindra.png'),
                                   fit: BoxFit.cover)),
                         ),
@@ -428,7 +428,7 @@ growBussinessDesktopMethod(BuildContext context) {
           decoration: BoxDecoration(
               color: Colors.amber,
               borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(
+              image: const DecorationImage(
                   image: AssetImage('assets/ttt2.jpg'), fit: BoxFit.cover)),
         ),
       ),
@@ -441,7 +441,7 @@ growBussinessDesktopMethod(BuildContext context) {
           decoration: BoxDecoration(
               color: Colors.amber,
               borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(
+              image: const DecorationImage(
                   image: AssetImage('assets/tttt1.jpg'), fit: BoxFit.cover)),
         ),
       ),

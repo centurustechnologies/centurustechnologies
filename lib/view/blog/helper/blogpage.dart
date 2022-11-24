@@ -7,7 +7,7 @@ import '../../helpers/onhover.dart';
 
 blogMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
-  return Container(
+  return SizedBox(
     width: width,
     child: Padding(
       padding: const EdgeInsets.fromLTRB(0, 100, 0, 60),
@@ -16,7 +16,8 @@ blogMethod(BuildContext context) {
           SingleChildScrollView(
             child: ResponsiveGridList(
               listViewBuilderOptions: ListViewBuilderOptions(
-                  shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics()),
               horizontalGridSpacing: 30,
               horizontalGridMargin: 100,
               verticalGridMargin: 50,
@@ -37,7 +38,8 @@ blogMethod(BuildContext context) {
           SingleChildScrollView(
             child: ResponsiveGridList(
               listViewBuilderOptions: ListViewBuilderOptions(
-                  shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics()),
               horizontalGridSpacing: 30,
               horizontalGridMargin: 130,
               verticalGridMargin: 5,
@@ -51,7 +53,6 @@ blogMethod(BuildContext context) {
                       borderRadius: BorderRadius.circular(10)),
                   elevation: 2.0,
                   child: Container(
-                    
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
@@ -66,7 +67,7 @@ blogMethod(BuildContext context) {
                               width: width,
                               //child: index==0? Image.asset('assets/blog-2.jpg',fit: BoxFit.cover,):index==1?Image.asset('assets/ee-1.jpg',fit: BoxFit.cover):Image.asset('assets/ee-3.jpg',fit: BoxFit.cover),
 
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(20),
                                     topRight: Radius.circular(20)),
@@ -76,7 +77,7 @@ blogMethod(BuildContext context) {
                                     fit: BoxFit.cover),
                               ));
                         }),
-                        SizedBox(
+                        const SizedBox(
                           height: 3,
                         ),
                         Padding(
@@ -90,26 +91,28 @@ blogMethod(BuildContext context) {
                                 width: 60,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(6),
-                                    color: Color.fromARGB(255, 244, 185, 166)),
+                                    color: const Color.fromARGB(
+                                        255, 244, 185, 166)),
                                 child: Center(
                                   child: Text(
                                     'Design',
                                     style: GoogleFonts.poppins(
                                       fontWeight: FontWeight.w400,
-                                      color: Color.fromARGB(255, 21, 21, 21),
+                                      color:
+                                          const Color.fromARGB(255, 21, 21, 21),
                                       fontSize: 11,
                                     ),
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
                                 'Do You Realy Understand The',
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w800,
-                                  color: Color.fromARGB(255, 34, 33, 33),
+                                  color: const Color.fromARGB(255, 34, 33, 33),
                                   fontSize: 18,
                                 ),
                               ),
@@ -117,33 +120,33 @@ blogMethod(BuildContext context) {
                                 'Concept Of Product Value?',
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w800,
-                                  color: Color.fromARGB(255, 34, 33, 33),
+                                  color: const Color.fromARGB(255, 34, 33, 33),
                                   fontSize: 18,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 6,
                               ),
                               Text(
                                 'Society is fragmenting into two parallel realities.',
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w300,
-                                  color: Color.fromARGB(255, 84, 82, 82),
+                                  color: const Color.fromARGB(255, 84, 82, 82),
                                   fontSize: 15,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 0.5,
                               ),
                               Text(
                                 'In one reality, you have infinite upside and....',
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w300,
-                                  color: Color.fromARGB(255, 84, 82, 82),
+                                  color: const Color.fromARGB(255, 84, 82, 82),
                                   fontSize: 15,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               Row(
@@ -154,12 +157,12 @@ blogMethod(BuildContext context) {
                                     width: 50,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(25),
-                                        image: DecorationImage(
+                                        image: const DecorationImage(
                                             image:
                                                 AssetImage('assets/logo45.jpg'),
                                             fit: BoxFit.cover)),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 15,
                                   ),
                                   Column(
@@ -171,19 +174,19 @@ blogMethod(BuildContext context) {
                                         'Anil Sharma',
                                         style: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w600,
-                                          color:
-                                              Color.fromARGB(255, 40, 39, 39),
+                                          color: const Color.fromARGB(
+                                              255, 40, 39, 39),
                                           fontSize: 14,
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 3,
                                       ),
                                       Text(
                                         'April 24,2021',
                                         style: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w300,
-                                          color: Color.fromARGB(
+                                          color: const Color.fromARGB(
                                               255, 130, 127, 127),
                                           fontSize: 13,
                                         ),
@@ -201,35 +204,33 @@ blogMethod(BuildContext context) {
                 ),
               ),
             ),
-          ),SizedBox(height: 30,),
-
- MaterialButton(
-                      color: Colors.blue,
-                      hoverColor: mainColor,
-                      height: 55,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Colors.blue,
-                        ),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      onPressed: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 18),
-                        child: Text(
-                          'Read More',
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        ),
-                      ),
-                    ),
-
-
-
-
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          MaterialButton(
+            color: Colors.blue,
+            hoverColor: mainColor,
+            height: 55,
+            shape: RoundedRectangleBorder(
+              side: const BorderSide(
+                color: Colors.blue,
+              ),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            onPressed: () {},
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18),
+              child: Text(
+                'Read More',
+                style: GoogleFonts.poppins(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     ),
@@ -239,7 +240,6 @@ blogMethod(BuildContext context) {
 _blog1(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
-  
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: Colors.white,
@@ -253,7 +253,7 @@ _blog1(BuildContext context) {
           Container(
               height: 300,
               width: 230,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
                       bottomLeft: Radius.circular(20)),
@@ -289,7 +289,7 @@ _blog1(BuildContext context) {
                           ],
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 13,
                   ),
                   SizedBox(
@@ -298,12 +298,12 @@ _blog1(BuildContext context) {
                       'Why Product managers must be strategic about chasing',
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w600,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: const Color.fromARGB(255, 0, 0, 0),
                         fontSize: 20,
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   SizedBox(
@@ -312,12 +312,12 @@ _blog1(BuildContext context) {
                       'Society is fragmenting into two parallel realities. In one reality, you have infinite',
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w300,
-                        color: Color.fromARGB(255, 61, 59, 59),
+                        color: const Color.fromARGB(255, 61, 59, 59),
                         fontSize: 15,
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
@@ -328,11 +328,11 @@ _blog1(BuildContext context) {
                         width: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage('assets/logo45.jpg'),
                                 fit: BoxFit.cover)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       Column(
@@ -343,18 +343,18 @@ _blog1(BuildContext context) {
                             'Anil Sharma',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600,
-                              color: Color.fromARGB(255, 40, 39, 39),
+                              color: const Color.fromARGB(255, 40, 39, 39),
                               fontSize: 14,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
                           Text(
                             'April 24,2021',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w300,
-                              color: Color.fromARGB(255, 130, 127, 127),
+                              color: const Color.fromARGB(255, 130, 127, 127),
                               fontSize: 13,
                             ),
                           ),
@@ -364,7 +364,7 @@ _blog1(BuildContext context) {
                   )
                 ]),
           ),
-          SizedBox(
+          const SizedBox(
             width: 50,
           ),
         ],

@@ -3,13 +3,10 @@
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/footer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class contactUsScreen extends StatelessWidget {
-  const contactUsScreen({Key? key}) : super(key: key);
+class ContactUsScreen extends StatelessWidget {
+  const ContactUsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +16,7 @@ class contactUsScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: width,
-        padding: EdgeInsets.all(20),
-       
+        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -61,7 +57,7 @@ class contactUsScreen extends StatelessWidget {
                           fontSize: 46,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       SizedBox(
@@ -74,7 +70,7 @@ class contactUsScreen extends StatelessWidget {
                               fontSize: 15,
                             ),
                           )),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       SizedBox(
@@ -89,7 +85,7 @@ class contactUsScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
                       Text(
@@ -108,7 +104,7 @@ class contactUsScreen extends StatelessWidget {
                           fontSize: 14,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -120,7 +116,7 @@ class contactUsScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(25),
                                 color: Colors.amber),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Container(
@@ -130,7 +126,7 @@ class contactUsScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(25),
                                 color: Colors.amber),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 13,
                           ),
                           Container(
@@ -148,8 +144,8 @@ class contactUsScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                   child: Container(
-                    height: 590
-,                    width:width/3.1,
+                    height: 590,
+                    width: width / 3.1,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.white,
@@ -169,46 +165,46 @@ class contactUsScreen extends StatelessWidget {
                                     color: Colors.black,
                                     fontSize: 24,
                                   ))),
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
-                          Row(
-                            children: [
-                              Container(
-                                width: width / 7.5,
-                                child: TextField(
-                                  obscureText: true,
-                                  decoration: InputDecoration(
-                                     border: new OutlineInputBorder(
-      borderSide: new BorderSide(color: Color.fromARGB(255, 212, 212, 212)),
-       
-                                   ),
-                                    labelText: 'Name',),),),
-                                     SizedBox(
-                                width: 14,
-                              ),
-                              Container(
-                                width: width / 7.5,
-                                child: TextField(
-                                  obscureText: true,
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    labelText: 'Email',
+                          Row(children: [
+                            SizedBox(
+                              width: width / 7.5,
+                              child: const TextField(
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color:
+                                            Color.fromARGB(255, 212, 212, 212)),
                                   ),
+                                  labelText: 'Name',
                                 ),
                               ),
-                                    
-                                    
-                                    
-                                    ]),
-                          SizedBox(
+                            ),
+                            const SizedBox(
+                              width: 14,
+                            ),
+                            SizedBox(
+                              width: width / 7.5,
+                              child: const TextField(
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  labelText: 'Email',
+                                ),
+                              ),
+                            ),
+                          ]),
+                          const SizedBox(
                             height: 15,
                           ),
                           Row(
                             children: [
-                              Container(
+                              SizedBox(
                                 width: width / 7.5,
-                                child: TextField(
+                                child: const TextField(
                                   obscureText: true,
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(),
@@ -216,12 +212,12 @@ class contactUsScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 14,
                               ),
-                              Container(
+                              SizedBox(
                                 width: width / 7.5,
-                                child: TextField(
+                                child: const TextField(
                                   obscureText: true,
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(),
@@ -231,13 +227,14 @@ class contactUsScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 15,
-                          ),  Row(
+                          ),
+                          Row(
                             children: [
-                              Container(
+                              SizedBox(
                                 width: width / 7.5,
-                                child: TextField(
+                                child: const TextField(
                                   obscureText: true,
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(),
@@ -245,12 +242,12 @@ class contactUsScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 14,
                               ),
-                              Container(
+                              SizedBox(
                                 width: width / 7.5,
-                                child: TextField(
+                                child: const TextField(
                                   obscureText: true,
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(),
@@ -260,13 +257,10 @@ class contactUsScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 0,
                           ),
-                         _buildTextField(context),
-
-
-
+                          _buildTextField(context),
                           SizedBox(
                             width: width / 3.59,
                             child: Text(
@@ -277,15 +271,15 @@ class contactUsScreen extends StatelessWidget {
                                   fontSize: 12,
                                 )),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
-                          Container(
+                          SizedBox(
                               height: 50,
                               width: width / 3.59,
                               child: Material(
                                 borderRadius: BorderRadius.circular(8),
-                                color: Color.fromARGB(255, 7, 104, 182),
+                                color: const Color.fromARGB(255, 7, 104, 182),
                                 child: GestureDetector(
                                     onTap: () {},
                                     child: Center(
@@ -299,8 +293,6 @@ class contactUsScreen extends StatelessWidget {
                                       ),
                                     )),
                               )),
-
-                             
                         ],
                       ),
                     ),
@@ -309,31 +301,36 @@ class contactUsScreen extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0,40, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
               child: Container(
-                width: width/1.1,
+                width: width / 1.1,
                 height: 1,
                 color: Colors.white.withOpacity(0.3),
               ),
-            ),SizedBox(height: 13,),
-             builtFooter(context,Colors.white,mainColor),
+            ),
+            const SizedBox(
+              height: 13,
+            ),
+            builtFooter(context, Colors.white, mainColor),
           ],
         ),
       ),
     );
   }
 }
- Widget _buildTextField(BuildContext context) {
-  final maxLines = 4;
- 
-  
+
+Widget _buildTextField(BuildContext context) {
+  const maxLines = 4;
+
   return Container(
-    
-    decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Colors.white, border: Border.all(color: Colors.grey) ),
-    margin: EdgeInsets.fromLTRB(0,12, 35, 0),
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: Colors.white,
+        border: Border.all(color: Colors.grey)),
+    margin: const EdgeInsets.fromLTRB(0, 12, 35, 0),
     height: maxLines * 24.0,
-    child:Padding(
-      padding: const EdgeInsets.all(4.0),
+    child: const Padding(
+      padding: EdgeInsets.all(4.0),
       child: TextField(
         maxLines: maxLines,
         decoration: InputDecoration(
@@ -346,4 +343,3 @@ class contactUsScreen extends StatelessWidget {
     ),
   );
 }
-

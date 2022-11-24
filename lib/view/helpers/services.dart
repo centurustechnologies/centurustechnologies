@@ -8,119 +8,138 @@ import 'package:responsive_grid_list/responsive_grid_list.dart';
 servicesDesktopMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
-    padding: EdgeInsets.fromLTRB(60, 100, 30, 70),
+    padding: const EdgeInsets.fromLTRB(60, 100, 30, 70),
     width: width,
-    color:  headingColor.withOpacity(0.1),
+    color: headingColor.withOpacity(0.1),
     child: Padding(
-      padding: const EdgeInsets.fromLTRB(12, 0, 0,0),
+      padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-        Container(
-          //height: 616,
-          //padding:EdgeInsets.fromLTRB(0, 30, 0, 0),
-          width: 440, padding: EdgeInsets.symmetric(
-                        horizontal: 30,
-                        vertical: 40,
-                      ),
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),
-                        color: Colors.white),
-         child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                          
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+                //height: 616,
+                //padding:EdgeInsets.fromLTRB(0, 30, 0, 0),
+                width: 440,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 30,
+                  vertical: 40,
+                ),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.white),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
                                   color: Colors.black.withOpacity(0.1),
                                   spreadRadius: 1,
-                                  blurRadius: 10
-                                ),
-                              ],
-                               shape: BoxShape.circle,
-                                color: Color.fromARGB(255, 201, 221, 238)
-                              
-                                    ),
-                                    child: Image.asset('assets/house2.png',fit: BoxFit.cover,height: 35,width: 35,),
+                                  blurRadius: 10),
+                            ],
+                            shape: BoxShape.circle,
+                            color: const Color.fromARGB(255, 201, 221, 238)),
+                        child: Image.asset(
+                          'assets/house2.png',
+                          fit: BoxFit.cover,
+                          height: 35,
+                          width: 35,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      Text(
+                        'Web Development',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 11,
+                      ),
+                      SizedBox(
+                        width: width / 4,
+                        child: Text(
+                          'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w400,
+                            color: Colors.grey,
+                            fontSize: 14,
                           ),
-                          SizedBox(
-                            height: 18,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      SizedBox(
+                        width: width / 4,
+                        child: Text(
+                          'Professionally architect unique process improvements via optimal.',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w400,
+                            color: Colors.grey,
+                            fontSize: 14,
                           ),
-                          Text(
-                            'Web Development',
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black,
-                              fontSize: 20,
-                            ),
-                                              ),
-                             SizedBox(
-                            height: 11,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        'Include with.....',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w500,
+                          color: const Color.fromARGB(255, 21, 21, 21),
+                          fontSize: 17,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      includeUs(),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      MaterialButton(
+                        //color: Colors.blue.withOpacity(0.2),
+                        //hoverColor: Colors.blue,
+                        height: 50,
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(
+                            color: Colors.white,
                           ),
-                          SizedBox(
-                            width: width / 4,
-                            child: Text(
-                              'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
-                              style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                color: Colors.grey,
-                                fontSize: 14,
-                              ),
-                              
-                            ),
-                          ),SizedBox(height: 14,),
-                            SizedBox(
-                            width: width / 4,
-                            child: Text(
-                              'Professionally architect unique process improvements via optimal.',
-                              style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                color: Colors.grey,
-                                fontSize: 14,
-                              ),
-                              
-                            ),
-                          )  ,SizedBox(height: 14,),
-                            Text(
-                            'Include with.....',
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w500,
-                              color: Color.fromARGB(255, 21, 21, 21),
-                              fontSize: 17,
-                            ),
-                                              ),              
-                                  SizedBox(height: 20,),            
-                             includeUs(),
-                               SizedBox(height: 12,),
-                             includeUs(),  SizedBox(height: 12,),
-                             includeUs(),  SizedBox(height: 12,),
-                             includeUs(),  SizedBox(height: 12,),
-                             includeUs(),  SizedBox(height: 12,),
-                             includeUs(), SizedBox(height: 25,),
-                                              
-                                              
-                                  MaterialButton(
-                      //color: Colors.blue.withOpacity(0.2),
-                      //hoverColor: Colors.blue,
-                      height: 50,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(5),
                         ),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      onPressed: () {
- Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const viewUs()),
-  );  
-
-
-                      },
+                      onPressed: () {},
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Text(
@@ -132,84 +151,81 @@ servicesDesktopMethod(BuildContext context) {
                           ),
                         ),
                       ),
-                    ),             
-                                              
-                                              
-                                              ]
-         )
-        ),SizedBox(width: 35,),
-          
-          Container(
-            width: width/1.7,
-            child: SingleChildScrollView(
-              child: ResponsiveGridList(
-                listViewBuilderOptions: ListViewBuilderOptions(
-                    shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
-                horizontalGridSpacing: 40,
-                horizontalGridMargin: 5,
-                verticalGridMargin: 0,
-                verticalGridSpacing: 20,
-                minItemWidth: 250,
-                maxItemsPerRow: 2,
-                minItemsPerRow: 1,
-                children:[
-                    child2(context),
-                     child2(context),
- child2(context),
- child2(context),
-                ]
-                ),
+                    ])),
+            const SizedBox(
+              width: 35,
+            ),
+            SizedBox(
+              width: width / 1.7,
+              child: SingleChildScrollView(
+                child: ResponsiveGridList(
+                    listViewBuilderOptions: ListViewBuilderOptions(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics()),
+                    horizontalGridSpacing: 40,
+                    horizontalGridMargin: 5,
+                    verticalGridMargin: 0,
+                    verticalGridSpacing: 20,
+                    minItemWidth: 250,
+                    maxItemsPerRow: 2,
+                    minItemsPerRow: 1,
+                    children: [
+                      child2(context),
+                      child2(context),
+                      child2(context),
+                      child2(context),
+                    ]),
               ),
-          ),]
-          ),
+            ),
+          ]),
     ),
-      
-    
   );
 }
-includeUs(){
-   return Row(
-                        children: [
-                          Container(
-                            height: 17,
-                            width: 17,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 134, 193, 242)),
-                            child: Icon(
-                              Icons.check,
-                              color: Colors.black,
-                              size: 14.0,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 9,
-                          ),
-                          Text(
-                            'Digital Confrence',
-                            style: GoogleFonts.openSans(
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
-                              fontSize: 15,
-                            ),
-                          ),
-                          SizedBox(height: 11,)
-                        ],
-                      );
+
+includeUs() {
+  return Row(
+    children: [
+      Container(
+        height: 17,
+        width: 17,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: const Color.fromARGB(255, 134, 193, 242)),
+        child: const Icon(
+          Icons.check,
+          color: Colors.black,
+          size: 14.0,
+        ),
+      ),
+      const SizedBox(
+        width: 9,
+      ),
+      Text(
+        'Digital Confrence',
+        style: GoogleFonts.openSans(
+          fontWeight: FontWeight.w400,
+          color: Colors.black,
+          fontSize: 15,
+        ),
+      ),
+      const SizedBox(
+        height: 11,
+      )
+    ],
+  );
 }
-child2(BuildContext context){
-var width = MediaQuery.of(context).size.width;
+
+child2(BuildContext context) {
+  var width = MediaQuery.of(context).size.width;
   return Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 30,
-                        vertical: 40,
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white
-                      ),
-                      // height: 250,
-                      //width: 250,
+    padding: const EdgeInsets.symmetric(
+      horizontal: 30,
+      vertical: 40,
+    ),
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12), color: Colors.white),
+    // height: 250,
+    //width: 250,
 
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -268,14 +284,7 @@ var width = MediaQuery.of(context).size.width;
                         ),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      onPressed: () {
-Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const viewUs()),
-  );  
-
-
-                      },
+                      onPressed: () {},
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Text(
@@ -296,7 +305,7 @@ Navigator.push(
 servicesMobileMethod(BuildContext context) {
   var width = MediaQuery.of(context).size.width;
   return Container(
-    padding: EdgeInsets.all(10),
+    padding: const EdgeInsets.all(10),
     width: width,
     color: Colors.white,
     child: Column(
@@ -314,7 +323,7 @@ servicesMobileMethod(BuildContext context) {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         SizedBox(
@@ -323,19 +332,20 @@ servicesMobileMethod(BuildContext context) {
             'Credibly grow premier ideas rather than bricks-and-clicks strategic theme areas distributed for stand-alone web-readiness.',
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w300,
-              color: Color.fromARGB(255, 130, 127, 127),
+              color: const Color.fromARGB(255, 130, 127, 127),
               fontSize: 15,
             ),
             textAlign: TextAlign.center,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         SingleChildScrollView(
           child: ResponsiveGridList(
             listViewBuilderOptions: ListViewBuilderOptions(
-                shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics()),
             horizontalGridSpacing: 1,
             horizontalGridMargin: 10,
             verticalGridMargin: 50,
@@ -368,7 +378,7 @@ servicesMobileMethod(BuildContext context) {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Container(
@@ -376,22 +386,22 @@ servicesMobileMethod(BuildContext context) {
                           width: 60,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                   image: AssetImage('assets/logo45.jpg'),
                                   fit: BoxFit.cover)),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 18,
                         ),
                         Text(
                           'Web Development',
                           style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w700,
-                            color: Color.fromARGB(255, 21, 21, 21),
+                            color: const Color.fromARGB(255, 21, 21, 21),
                             fontSize: 20,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 11,
                         ),
                         SizedBox(
@@ -400,7 +410,7 @@ servicesMobileMethod(BuildContext context) {
                             'Holisticly morph distinctive methodologies and vertical e-tailers. Rapidiously grow customized data.',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w300,
-                              color: Color.fromARGB(255, 130, 127, 127),
+                              color: const Color.fromARGB(255, 130, 127, 127),
                               fontSize: 14,
                             ),
                             textAlign: TextAlign.center,

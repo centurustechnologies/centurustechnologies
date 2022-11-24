@@ -47,7 +47,7 @@ jobs(BuildContext context) {
                   'Phosfluorescently disintermediate revolutionary paradigms before enabled interfaces. Dynamically transition skills vis-a-vis virtual customer service via impactful partnerships with technically sound paradigms with cutting-edge initiatives.',
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w400,
-                    color: Color.fromARGB(255, 82, 80, 80),
+                    color: const Color.fromARGB(255, 82, 80, 80),
                     fontSize: 16,
                   ),
                 ),
@@ -58,7 +58,8 @@ jobs(BuildContext context) {
         SingleChildScrollView(
           child: ResponsiveGridList(
             listViewBuilderOptions: ListViewBuilderOptions(
-                shrinkWrap: true, physics: NeverScrollableScrollPhysics()),
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics()),
             horizontalGridSpacing: 30,
             horizontalGridMargin: 70,
             verticalGridMargin: 50,
@@ -101,28 +102,35 @@ _blog2(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 13,
                   ),
                   Row(
                     children: [
-                      Container(height: 20,width: 20,  decoration: BoxDecoration( image: DecorationImage(
+                      Container(
+                          height: 20,
+                          width: 20,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
                                   image: AssetImage('assets/purse.png'),
-                                   fit: BoxFit.cover))),SizedBox(width: 6,),
+                                  fit: BoxFit.cover))),
+                      const SizedBox(
+                        width: 6,
+                      ),
                       SizedBox(
                         width: width / 4.7,
                         child: Text(
                           'Remote-Full-Time',
                           style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
-                            color: Color.fromARGB(255, 206, 201, 201),
+                            color: const Color.fromARGB(255, 206, 201, 201),
                             fontSize: 15,
                           ),
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   SizedBox(
@@ -136,7 +144,7 @@ _blog2(BuildContext context) {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -144,49 +152,73 @@ _blog2(BuildContext context) {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        children: [  Container(height: 20,width: 20,  decoration: BoxDecoration( image: DecorationImage(
-                                  image: AssetImage('assets/apartment.png'),
-                                   fit: BoxFit.cover))),SizedBox(width: 6,),
+                        children: [
+                          Container(
+                              height: 20,
+                              width: 20,
+                              decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/apartment.png'),
+                                      fit: BoxFit.cover))),
+                          const SizedBox(
+                            width: 6,
+                          ),
                           Text(
                             'Centurus',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 206, 201, 201),
+                              color: const Color.fromARGB(255, 206, 201, 201),
                               fontSize: 15,
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 13,
                       ),
                       Row(
-                         children: [  Container(height: 20,width: 20,  decoration: BoxDecoration( image: DecorationImage(
-                                 image: AssetImage('assets/location.png'),
-                                 fit: BoxFit.cover))),SizedBox(width: 6,),
-                                   //Icon(Icons.location_disabled_rounded,color: Colors.white,),
+                        children: [
+                          Container(
+                              height: 20,
+                              width: 20,
+                              decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/location.png'),
+                                      fit: BoxFit.cover))),
+                          const SizedBox(
+                            width: 6,
+                          ),
+                          //Icon(Icons.location_disabled_rounded,color: Colors.white,),
                           Text(
                             'Ludhiana',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 206, 201, 201),
+                              color: const Color.fromARGB(255, 206, 201, 201),
                               fontSize: 15,
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 13,
                       ),
                       Row(
-                        children: [Container(height: 20,width: 20,  decoration: BoxDecoration( image: DecorationImage(
-                                 image: AssetImage('assets/wallet.png'),
-                                 fit: BoxFit.cover))),SizedBox(width: 6,),
+                        children: [
+                          Container(
+                              height: 20,
+                              width: 20,
+                              decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/wallet.png'),
+                                      fit: BoxFit.cover))),
+                          const SizedBox(
+                            width: 6,
+                          ),
                           Text(
                             '(35-55)k',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 206, 201, 201),
+                              color: const Color.fromARGB(255, 206, 201, 201),
                               fontSize: 15,
                             ),
                           ),
@@ -194,7 +226,7 @@ _blog2(BuildContext context) {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 44,
                   ),
                   MaterialButton(
@@ -202,7 +234,7 @@ _blog2(BuildContext context) {
                     // hoverColor: Colors.blue,
                     height: 50,
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(
+                      side: const BorderSide(
                         color: Colors.white,
                       ),
                       borderRadius: BorderRadius.circular(5),
@@ -214,7 +246,7 @@ _blog2(BuildContext context) {
                         'Apply Now',
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
-                          color: Color.fromARGB(255, 206, 201, 201),
+                          color: const Color.fromARGB(255, 206, 201, 201),
                           fontSize: 15,
                         ),
                       ),
@@ -238,7 +270,7 @@ _blog2(BuildContext context) {
                           'Developer',
                           style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
-                            color: Color.fromARGB(255, 235, 230, 230),
+                            color: const Color.fromARGB(255, 235, 230, 230),
                             fontSize: 11,
                           ),
                         ),

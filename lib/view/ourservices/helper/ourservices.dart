@@ -1,36 +1,26 @@
-import 'dart:developer';
-
 import 'package:centurus_web_app/view/blog/helper/headertitle.dart';
 import 'package:centurus_web_app/view/header_widget.dart';
+import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/clientsay.dart';
 import 'package:centurus_web_app/view/helpers/contactus.dart';
 import 'package:centurus_web_app/view/helpers/footer.dart';
 import 'package:centurus_web_app/view/helpers/services.dart';
-import 'package:centurus_web_app/view/navBar/desktop_navBar.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
-import 'package:centurus_web_app/view/helpers/app_constants.dart';
-import 'package:centurus_web_app/view/helpers/banners.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-
-class ourServices extends StatefulWidget {
-  const ourServices({Key? key}) : super(key: key);
+class OurServices extends StatefulWidget {
+  const OurServices({Key? key}) : super(key: key);
 
   @override
-  State<ourServices> createState() => _DashboardState();
+  State<OurServices> createState() => _DashboardState();
 }
 
-class _DashboardState extends State<ourServices>
+class _DashboardState extends State<OurServices>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     tabController = TabController(length: 3, vsync: this);
   }
@@ -39,7 +29,6 @@ class _DashboardState extends State<ourServices>
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       key: scaffoldKey,
@@ -55,7 +44,7 @@ class _DashboardState extends State<ourServices>
               servicesDesktopMethod(context),
               clientSayDesktopMethod(context),
               ContactUsDesktopMethod(context),
-              Footer(context,whiteColor,mainColor),
+              Footer(context, whiteColor, mainColor),
             ],
           ),
         ),

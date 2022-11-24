@@ -1,6 +1,8 @@
 import 'dart:developer';
 
 import 'package:centurus_web_app/view/header_widget.dart';
+import 'package:centurus_web_app/view/helpers/app_constants.dart';
+import 'package:centurus_web_app/view/helpers/banners.dart';
 import 'package:centurus_web_app/view/helpers/blog.dart';
 import 'package:centurus_web_app/view/helpers/clientsay.dart';
 import 'package:centurus_web_app/view/helpers/contactus.dart';
@@ -11,16 +13,11 @@ import 'package:centurus_web_app/view/helpers/services.dart';
 import 'package:centurus_web_app/view/helpers/servicewepro.dart';
 import 'package:centurus_web_app/view/helpers/we_build_any.dart';
 import 'package:centurus_web_app/view/helpers/we_build_tech.dart';
-import 'package:centurus_web_app/view/helpers/appDesign.dart';
-import 'package:centurus_web_app/view/helpers/webdesign2.dart';
 import 'package:centurus_web_app/view/helpers/why_choose_us.dart';
-import 'package:centurus_web_app/view/navBar/desktop_navBar.dart';
 import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
-import 'package:centurus_web_app/view/helpers/app_constants.dart';
-import 'package:centurus_web_app/view/helpers/banners.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -35,9 +32,39 @@ class _DashboardState extends State<Dashboard>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
+  String year = '';
+  String companies = '';
+
+  Future<void> changeYears() async {
+    FirebaseFirestore.instance
+        .collection('exprience')
+        .doc('n3qGsJ2uJnclS9eCJkPP')
+        .get()
+        .then((value) {
+      setState(() {
+        year = value.get('exprience');
+      });
+      log('Year is : $year');
+    });
+  }
+
+  Future<void> changeCompanies() async {
+    FirebaseFirestore.instance
+        .collection('companies')
+        .doc('NQH9ML1UdD11jnVlUt7d')
+        .get()
+        .then((value) {
+      setState(() {
+        companies = value.get('companies');
+      });
+      log('companies is : $companies');
+    });
+  }
+
   @override
   void initState() {
-    // TODO: implement initState
+    changeYears();
+    changeCompanies();
     super.initState();
     tabController = TabController(length: 3, vsync: this);
   }
@@ -46,7 +73,6 @@ class _DashboardState extends State<Dashboard>
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       key: scaffoldKey,
@@ -68,9 +94,9 @@ class _DashboardState extends State<Dashboard>
               ],
             ),
             ScreenTypeLayout(
-              mobile: whyChooseUsMobileMethod(context),
+              mobile: whyChooseUsMobileMethod(context, year),
               //tablet: whyChooseUsTabletMethod(context),
-              desktop: whyChooseUsDesktopMethod(context),
+              desktop: whyChooseUsDesktopMethod(context, year),
             ),
             ScreenTypeLayout(
               desktop: WeBuildAnyDesktopMethod(context),
@@ -95,9 +121,9 @@ class _DashboardState extends State<Dashboard>
               desktop: portFolioDesktopMethod(context),
             ),
             ScreenTypeLayout(
-              mobile: ourWorkMobileMethod(context),
+              mobile: ourWorkMobileMethod(context, companies),
               //tablet: whyChooseUsTabletMethod(context),
-              desktop: ourWorkDesktopMethod(context),
+              desktop: ourWorkDesktopMethod(context, companies),
             ),
             ScreenTypeLayout(
               mobile: clientSayMobileMethod(context),
