@@ -33,7 +33,10 @@ class _DashboardState extends State<Dashboard>
   late TabController tabController;
 
   String year = '';
-  String companies = '';
+  String companiesCount = '';
+  // List companiesImage = [];
+  String projectImage = '';
+  String projectLink = '';
 
   Future<void> changeYears() async {
     FirebaseFirestore.instance
@@ -48,16 +51,31 @@ class _DashboardState extends State<Dashboard>
     });
   }
 
+  final CollectionReference companiesImage = FirebaseFirestore.instance.collection('companies');
+
   Future<void> changeCompanies() async {
     FirebaseFirestore.instance
         .collection('companies')
-        .doc('NQH9ML1UdD11jnVlUt7d')
+        .count()
         .get()
         .then((value) {
-      setState(() {
-        companies = value.get('companies');
-      });
-      log('companies is : $companies');
+      companiesCount = value.count.toString();
+      log('Companies Count : $companiesCount');
+    });
+  }
+
+  Future<void> projectData() async {
+    FirebaseFirestore.instance
+        .collection('projects')
+        .get()
+        .then((QuerySnapshot querySnapshot) {
+      for (var doc in querySnapshot.docs) {
+        setState(() {
+          projectImage = doc['image'];
+          projectLink = doc['link'];
+        });
+        log('massege : $projectImage');
+      }
     });
   }
 
@@ -65,6 +83,7 @@ class _DashboardState extends State<Dashboard>
   void initState() {
     changeYears();
     changeCompanies();
+    projectData();
     super.initState();
     tabController = TabController(length: 3, vsync: this);
   }
@@ -104,11 +123,17 @@ class _DashboardState extends State<Dashboard>
             ),
             ScreenTypeLayout(
               mobile: WeBuildTechMobileScreen(
-                  width: width, tabController: tabController),
+                width: width,
+                tabController: tabController,
+                year: year,
+              ),
               tablet: WeBuildTechTabletScreen(
-                  width: width, tabController: tabController),
+                  width: width, tabController: tabController, year: year),
               desktop: WeBuildTechDesktopScreen(
-                  width: width, tabController: tabController),
+                width: width,
+                tabController: tabController,
+                year: year,
+              ),
             ),
             ScreenTypeLayout(
               mobile: serviceWeProvideMobileMethod(context),
@@ -116,14 +141,15 @@ class _DashboardState extends State<Dashboard>
               desktop: serviceWeProDesktopMethod(context),
             ),
             ScreenTypeLayout(
-              mobile: portFolioMobileMethod(context),
-              tablet: portFolioTabletMethod(context),
-              desktop: portFolioDesktopMethod(context),
+              mobile: portFolioMobileMethod(context, projectLink, projectImage),
+              tablet: portFolioTabletMethod(context, projectLink, projectImage),
+              desktop:
+                  portFolioDesktopMethod(context, projectLink, projectImage),
             ),
             ScreenTypeLayout(
-              mobile: ourWorkMobileMethod(context, companies),
-              //tablet: whyChooseUsTabletMethod(context),
-              desktop: ourWorkDesktopMethod(context, companies),
+              mobile: ourWorkMobileMethod(context, companiesCount),
+              // tablet: whyChooseUsTabletMethod(context),
+              desktop: ourWorkDesktopMethod(context, companiesCount),
             ),
             ScreenTypeLayout(
               mobile: clientSayMobileMethod(context),
@@ -134,7 +160,7 @@ class _DashboardState extends State<Dashboard>
               children: [
                 ScreenTypeLayout(
                   mobile: servicesMobileMethod(context),
-                  //tablet: whyChooseUsTabletMethod(context),
+                  // tablet: whyChooseUsTabletMethod(context),
                   desktop: servicesDesktopMethod(context),
                 ),
               ],

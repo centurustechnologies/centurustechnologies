@@ -5,16 +5,24 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class WeBuildTechTabletScreen extends StatelessWidget {
+class WeBuildTechTabletScreen extends StatefulWidget {
   const WeBuildTechTabletScreen({
     Key? key,
     required this.width,
     required this.tabController,
+    required this.year,
   }) : super(key: key);
 
+  final String year;
   final double width;
   final TabController tabController;
 
+  @override
+  State<WeBuildTechTabletScreen> createState() =>
+      _WeBuildTechTabletScreenState();
+}
+
+class _WeBuildTechTabletScreenState extends State<WeBuildTechTabletScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,12 +31,12 @@ class WeBuildTechTabletScreen extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.all(5),
-            width: width,
+            width: widget.width,
             color: mainColor,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: TabBar(
-                controller: tabController,
+                controller: widget.tabController,
                 indicatorColor: Colors.blue,
                 indicatorSize: TabBarIndicatorSize.label,
                 labelColor: Colors.white,
@@ -142,25 +150,25 @@ class WeBuildTechTabletScreen extends StatelessWidget {
           ),
           Container(
             height: 430,
-            width: width,
+            width: widget.width,
             color: mainColor,
             child: TabBarView(
-              controller: tabController,
+              controller: widget.tabController,
               children: [
                 ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                  desktop: WEbDEsign2(context, widget.year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: WEbDEsign2MobileMethod(context, widget.year),
                 ),
                 ScreenTypeLayout(
-                  desktop: appDesignDesktopMethod(context),
+                  desktop: appDesignDesktopMethod(context, widget.year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: appDesignMobileMethod(context),
+                  mobile: appDesignMobileMethod(context, widget.year),
                 ),
                 ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                  desktop: WEbDEsign2(context, widget.year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: WEbDEsign2MobileMethod(context, widget.year),
                 ),
               ],
             ),
@@ -176,10 +184,12 @@ class WeBuildTechDesktopScreen extends StatelessWidget {
     Key? key,
     required this.width,
     required this.tabController,
+    required this.year,
   }) : super(key: key);
 
   final double width;
   final TabController tabController;
+  final String year;
 
   @override
   Widget build(BuildContext context) {
@@ -323,19 +333,19 @@ class WeBuildTechDesktopScreen extends StatelessWidget {
               controller: tabController,
               children: [
                 ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                  desktop: WEbDEsign2(context, year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: WEbDEsign2MobileMethod(context, year),
                 ),
                 ScreenTypeLayout(
-                  desktop: appDesignDesktopMethod(context),
+                  desktop: appDesignDesktopMethod(context, year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: appDesignMobileMethod(context),
+                  mobile: appDesignMobileMethod(context, year),
                 ),
                 ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                  desktop: WEbDEsign2(context, year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: WEbDEsign2MobileMethod(context, year),
                 ),
               ],
             ),
@@ -351,10 +361,12 @@ class WeBuildTechMobileScreen extends StatelessWidget {
     Key? key,
     required this.width,
     required this.tabController,
+    required this.year,
   }) : super(key: key);
 
   final double width;
   final TabController tabController;
+  final String year;
 
   @override
   Widget build(BuildContext context) {
@@ -570,19 +582,19 @@ class WeBuildTechMobileScreen extends StatelessWidget {
               controller: tabController,
               children: [
                 ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                  desktop: WEbDEsign2(context, year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: WEbDEsign2MobileMethod(context, year),
                 ),
                 ScreenTypeLayout(
-                  desktop: appDesignDesktopMethod(context),
+                  desktop: appDesignDesktopMethod(context, year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: appDesignMobileMethod(context),
+                  mobile: appDesignMobileMethod(context, year),
                 ),
                 ScreenTypeLayout(
-                  desktop: WEbDEsign2(context),
+                  desktop: WEbDEsign2(context, year),
                   //tablet: whyChooseUsTabletMethod(context),
-                  mobile: WEbDEsign2MobileMethod(context),
+                  mobile: WEbDEsign2MobileMethod(context, year),
                 ),
               ],
             ),

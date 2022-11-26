@@ -3,7 +3,7 @@ import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-portFolioDesktopMethod(BuildContext context) {
+portFolioDesktopMethod(BuildContext context, projectLink, projectImage) {
   var width = MediaQuery.of(context).size.width;
   return Container(
     width: width,
@@ -62,15 +62,16 @@ portFolioDesktopMethod(BuildContext context) {
         ),
         CarouselSlider(
           options: CarouselOptions(
-              height: 300,
-              enlargeCenterPage: true,
-              enableInfiniteScroll: true,
-              viewportFraction: 0.3,
-              aspectRatio: 1.0,
-              initialPage: 0,
-              pauseAutoPlayInFiniteScroll: true,
-              autoPlayInterval: const Duration(seconds: 2),
-              autoPlay: true),
+            height: 300,
+            enlargeCenterPage: true,
+            enableInfiniteScroll: true,
+            viewportFraction: 0.3,
+            aspectRatio: 1.0,
+            initialPage: 0,
+            pauseAutoPlayInFiniteScroll: true,
+            autoPlayInterval: const Duration(seconds: 2),
+            autoPlay: true,
+          ),
           items: source.map(
             (i) {
               return Builder(
@@ -86,7 +87,7 @@ portFolioDesktopMethod(BuildContext context) {
   );
 }
 
-portFolioMobileMethod(BuildContext context) {
+portFolioMobileMethod(BuildContext context, projectLink, projectImage) {
   var width = MediaQuery.of(context).size.width;
   return Container(
     width: width,
@@ -138,15 +139,16 @@ portFolioMobileMethod(BuildContext context) {
         ),
         CarouselSlider(
           options: CarouselOptions(
-              height: 200,
-              enlargeCenterPage: true,
-              enableInfiniteScroll: true,
-              viewportFraction: 0.6,
-              aspectRatio: 1.0,
-              initialPage: 0,
-              pauseAutoPlayInFiniteScroll: true,
-              autoPlayInterval: const Duration(seconds: 2),
-              autoPlay: true),
+            height: 200,
+            enlargeCenterPage: true,
+            enableInfiniteScroll: true,
+            viewportFraction: 0.6,
+            aspectRatio: 1.0,
+            initialPage: 0,
+            pauseAutoPlayInFiniteScroll: true,
+            autoPlayInterval: const Duration(seconds: 2),
+            autoPlay: true,
+          ),
           items: source.map(
             (i) {
               return Builder(
@@ -162,7 +164,7 @@ portFolioMobileMethod(BuildContext context) {
   );
 }
 
-portFolioTabletMethod(BuildContext context) {
+portFolioTabletMethod(BuildContext context, projectLink, projectImage) {
   var width = MediaQuery.of(context).size.width;
   return Container(
     width: width,

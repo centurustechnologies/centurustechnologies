@@ -1,7 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-ourWorkDesktopMethod(BuildContext context, companies) {
+ourWorkDesktopMethod(BuildContext context, companiesCount) {
+  final CollectionReference companiesImage =
+      FirebaseFirestore.instance.collection('companies');
+
   var width = MediaQuery.of(context).size.width;
   return Container(
     height: 500,
@@ -15,7 +19,7 @@ ourWorkDesktopMethod(BuildContext context, companies) {
           height: 100,
         ),
         Text(
-          'Over $companies+ Companies Trusted Us',
+          'Over $companiesCount+ Companies Trusted Us',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w600,
             color: Colors.black,
@@ -24,7 +28,7 @@ ourWorkDesktopMethod(BuildContext context, companies) {
         ),
         const SizedBox(height: 25),
         Text(
-          'Over $companies+ Companies Trusted Us',
+          'Over $companiesCount+ Companies Trusted Us',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w300,
             color: const Color.fromARGB(255, 98, 97, 97),
@@ -37,215 +41,61 @@ ourWorkDesktopMethod(BuildContext context, companies) {
         SizedBox(
           height: 100,
           width: width,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
+          child: StreamBuilder(
+            stream: companiesImage.snapshots(),
+            builder: (context, AsyncSnapshot<QuerySnapshot> streamSnapshot) {
+              if (streamSnapshot.hasData) {
+                return ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: streamSnapshot.data!.docs.length,
+                  itemBuilder: (context, index) {
+                    final DocumentSnapshot documentSnapshot =
+                        streamSnapshot.data!.docs[index];
+                    return Padding(
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 85,
+                            width: 145,
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(22),
+                                bottomRight: Radius.circular(22),
+                              ),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  documentSnapshot['image'],
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 30,
+                          ),
+                        ],
                       ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 120,
-                      width: 200,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 120,
-                      width: 200,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+                    );
+                  },
+                );
+              }
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            },
           ),
-        )
+        ),
       ],
     ),
   );
 }
 
-ourWorkMobileMethod(BuildContext context, companies) {
+ourWorkMobileMethod(BuildContext context, companiesCount) {
+  final CollectionReference companiesImage =
+      FirebaseFirestore.instance.collection('companies');
+
   var width = MediaQuery.of(context).size.width;
   return Container(
     height: 320,
@@ -259,7 +109,7 @@ ourWorkMobileMethod(BuildContext context, companies) {
           height: 50,
         ),
         Text(
-          'Over $companies+ Companies Trusted Us',
+          'Over $companiesCount+ Companies Trusted Us',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w600,
             color: Colors.black,
@@ -268,7 +118,7 @@ ourWorkMobileMethod(BuildContext context, companies) {
         ),
         const SizedBox(height: 15),
         Text(
-          'Over $companies+ Companies Trusted Us',
+          'Over $companiesCount+ Companies Trusted Us',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w300,
             color: const Color.fromARGB(255, 98, 97, 97),
@@ -281,209 +131,52 @@ ourWorkMobileMethod(BuildContext context, companies) {
         SizedBox(
           height: 100,
           width: width,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
+          child: StreamBuilder(
+            stream: companiesImage.snapshots(),
+            builder: (context, AsyncSnapshot<QuerySnapshot> streamSnapshot) {
+              if (streamSnapshot.hasData) {
+                return ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: streamSnapshot.data!.docs.length,
+                  itemBuilder: (context, index) {
+                    final DocumentSnapshot documentSnapshot =
+                        streamSnapshot.data!.docs[index];
+                    return Padding(
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 85,
+                            width: 145,
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(22),
+                                bottomRight: Radius.circular(22),
+                              ),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  documentSnapshot['image'],
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 30,
+                          ),
+                        ],
                       ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 85,
-                      width: 145,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(22),
-                            bottomRight: Radius.circular(22)),
-                        image: DecorationImage(
-                          image: AssetImage('assets/logo45.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+                    );
+                  },
+                );
+              }
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            },
           ),
-        )
+        ),
       ],
     ),
   );

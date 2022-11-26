@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-WEbDEsign2(BuildContext context) {
-
+WEbDEsign2(BuildContext context, year) {
   return Padding(
     padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
     child: Row(
@@ -54,9 +53,9 @@ WEbDEsign2(BuildContext context) {
             const SizedBox(
               height: 8,
             ),
-            const Text(
-              '5+ years exprience',
-              style: TextStyle(
+            Text(
+              '$year+ years exprience',
+              style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 color: Colors.white,
                 fontSize: 32,
@@ -201,7 +200,7 @@ WEbDEsign2(BuildContext context) {
   );
 }
 
-WEbDEsign2MobileMethod(BuildContext context) {
+WEbDEsign2MobileMethod(BuildContext context, year) {
   var width = MediaQuery.of(context).size.width;
   return Padding(
     padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
@@ -225,9 +224,9 @@ WEbDEsign2MobileMethod(BuildContext context) {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'We are working with 5+ years exprience',
-              style: TextStyle(
+            Text(
+              'We are working with $year+ years exprience',
+              style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 color: Colors.white,
                 fontSize: 18,
