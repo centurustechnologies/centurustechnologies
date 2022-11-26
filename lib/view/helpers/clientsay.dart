@@ -151,11 +151,12 @@ clientSayDesktopMethod(BuildContext context) {
                                           borderRadius:
                                               BorderRadius.circular(25),
                                           image: DecorationImage(
-                                              image: NetworkImage(
-                                                streamSnapshot.data!.docs[0]
-                                                    ['image'],
-                                              ),
-                                              fit: BoxFit.cover),
+                                            image: NetworkImage(
+                                              streamSnapshot.data!.docs[0]
+                                                  ['image'],
+                                            ),
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                       ),
                                       const SizedBox(

@@ -60,17 +60,20 @@ desktopBanner(BuildContext context) {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: mainColor,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Text(
-                      'Contact Us',
-                      style: GoogleFonts.openSans(
-                        fontWeight: FontWeight.bold,
-                        color: whiteColor,
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: mainColor,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Text(
+                        'Contact Us',
+                        style: GoogleFonts.openSans(
+                          fontWeight: FontWeight.bold,
+                          color: whiteColor,
+                        ),
                       ),
                     ),
                   ),

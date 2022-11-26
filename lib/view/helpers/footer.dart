@@ -1,11 +1,14 @@
 // ignore_for_file: non_constant_identifier_names, avoid_print
 
+import 'dart:developer';
+
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:easy_web_view2/easy_web_view2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:responsive_grid_list/responsive_grid_list.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 String src =
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.742150073073!2d75.86811477516136!3d30.89387347450696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a830fff75fc87%3A0x74b3bff073fbadf2!2sCenturus%20Technologies%20Private%20Limited%20%7C%20App%20%26%20Web%20Development%20Company%20In%20Ludhiana!5e0!3m2!1sen!2sin!4v1668866272359!5m2!1sen!2sin';
@@ -15,7 +18,21 @@ const bool _useWidgets = false;
 
 const LatLng currentLocation = LatLng(25.1193, 55.3773);
 
-Footer(BuildContext context, color, secondaryColor) {
+Footer(
+  BuildContext context,
+  color,
+  secondaryColor,
+  phoneNumber,
+  email,
+  address,
+  facebookUrl,
+  instagramUrl,
+  linkedinUrl,
+  aboutUs,
+  twitterUrl,
+  tumblerUrl,
+  copyright,
+) {
   var width = MediaQuery.of(context).size.width;
 
   return Container(
@@ -36,9 +53,8 @@ Footer(BuildContext context, color, secondaryColor) {
             child: SingleChildScrollView(
               child: ResponsiveGridList(
                 listViewBuilderOptions: ListViewBuilderOptions(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                ),
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics()),
                 horizontalGridSpacing: 2,
                 horizontalGridMargin: 10,
                 verticalGridMargin: 2,
@@ -68,7 +84,7 @@ Footer(BuildContext context, color, secondaryColor) {
                           SizedBox(
                             width: 200,
                             child: Text(
-                              "We are leading IT company dealing with app development & design, web development & design services. We had 3+ years of experience in development field and done more than 20+ projects. We work on iOS, android device's app development.",
+                              aboutUs,
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.w200,
                                 color: secondaryColor,
@@ -130,7 +146,7 @@ Footer(BuildContext context, color, secondaryColor) {
                           SizedBox(
                             width: 200,
                             child: Text(
-                              'Adress:Pwd Market, Division No. 6, SCO 18-19, Dholewal Chowk, Ludhiana, Punjab 141003',
+                              address,
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.w200,
                                 color: secondaryColor,
@@ -142,7 +158,7 @@ Footer(BuildContext context, color, secondaryColor) {
                             height: 30,
                           ),
                           Text(
-                            'Phone No +91-7719767557',
+                            'Phone No +91-$phoneNumber',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w200,
                               color: secondaryColor,
@@ -153,7 +169,7 @@ Footer(BuildContext context, color, secondaryColor) {
                             height: 20,
                           ),
                           Text(
-                            'anil337228@gmail.com',
+                            email,
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w200,
                               color: secondaryColor,
@@ -305,20 +321,38 @@ Footer(BuildContext context, color, secondaryColor) {
             color: secondaryColor,
           ),
         ),
-        builtFooter(context, Colors.white, mainColor),
+        builtFooter(
+          context,
+          Colors.white,
+          mainColor,
+          facebookUrl,
+          instagramUrl,
+          linkedinUrl,
+          twitterUrl,
+          tumblerUrl,
+          copyright,
+        ),
       ],
     ),
   );
 }
 
-builtFooter(context, color, secondaryColor) {
+builtFooter(
+  context,
+  color,
+  secondaryColor,
+  facebookUrl,
+  instagramUrl,
+  linkedinUrl,
+  twitterUrl,
+  tumblerUrl,
+  copyright,
+) {
   var width = MediaQuery.of(context).size.width;
   return SingleChildScrollView(
     child: ResponsiveGridList(
       listViewBuilderOptions: ListViewBuilderOptions(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-      ),
+          shrinkWrap: true, physics: const NeverScrollableScrollPhysics()),
       // horizontalGridSpacing: 200,
       // horizontalGridMargin: 20,
       verticalGridMargin: 10,
@@ -329,7 +363,7 @@ builtFooter(context, color, secondaryColor) {
       children: [
         Center(
           child: Text(
-            "Copyright @2022 all rights reserved | Anil",
+            copyright,
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w300,
               color: secondaryColor,
@@ -340,84 +374,130 @@ builtFooter(context, color, secondaryColor) {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 25,
-              width: 25,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: const DecorationImage(
-                  image: AssetImage("assets/facebook.png"),
-                  fit: BoxFit.fill,
+            InkWell(
+              onTap: () {
+                launchUrl(
+                  Uri.parse(facebookUrl),
+                );
+                log('facebook url : $facebookUrl');
+              },
+              child: Container(
+                height: 25,
+                width: 25,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  image: const DecorationImage(
+                    image: AssetImage("assets/facebook.png"),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
             SizedBox(
               width: width / 150,
             ),
-            Container(
-              height: 25,
-              width: 25,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: const DecorationImage(
-                  image: AssetImage("assets/linked.png"),
-                  fit: BoxFit.fill,
+            InkWell(
+              onTap: () {
+                launchUrl(
+                  Uri.parse(linkedinUrl),
+                );
+                log('linkedin url : $linkedinUrl');
+              },
+              child: Container(
+                height: 25,
+                width: 25,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  image: const DecorationImage(
+                    image: AssetImage("assets/linked.png"),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
             SizedBox(
               width: width / 150,
             ),
-            Container(
-              height: 25,
-              width: 25,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: const DecorationImage(
-                  image: AssetImage("assets/twitter.png"),
-                  fit: BoxFit.fill,
+            InkWell(
+              onTap: () {
+                launchUrl(
+                  Uri.parse(twitterUrl),
+                );
+                log('teitter url : $twitterUrl');
+                
+              },
+              child: Container(
+                height: 25,
+                width: 25,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  image: const DecorationImage(
+                    image: AssetImage("assets/twitter.png"),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
             SizedBox(
               width: width / 150,
             ),
-            Container(
-              height: 25,
-              width: 25,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: const DecorationImage(
-                  image: AssetImage("assets/insta.png"),
-                  fit: BoxFit.fill,
+            InkWell(
+              onTap: () {
+                launchUrl(
+                  Uri.parse(instagramUrl),
+                );
+                log('instagram url : $instagramUrl');
+             
+              },
+              child: Container(
+                height: 25,
+                width: 25,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  image: const DecorationImage(
+                    image: AssetImage("assets/insta.png"),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
             SizedBox(
               width: width / 150,
             ),
-            Container(
-              height: 25,
-              width: 25,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: const DecorationImage(
-                  image: AssetImage("assets/tumblr.png"),
-                  fit: BoxFit.fill,
+            InkWell(
+              onTap: () {
+                launchUrl(
+                  Uri.parse(tumblerUrl),
+                );
+                log('tumbler url : $tumblerUrl');
+  
+              },
+              child: Container(
+                height: 25,
+                width: 25,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  image: const DecorationImage(
+                    image: AssetImage("assets/tumblr.png"),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
             SizedBox(
               width: width / 150,
             ),
-            Container(
-              height: 25,
-              width: 25,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: const DecorationImage(
-                  image: AssetImage("assets/my-business.png"),
-                  fit: BoxFit.fill,
+            InkWell(
+              onTap: () {},
+              child: Container(
+                height: 25,
+                width: 25,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  image: const DecorationImage(
+                    image: AssetImage("assets/my-business.png"),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),

@@ -1,18 +1,58 @@
 // ignore_for_file: unused_local_variable
 
+import 'dart:developer';
+
 import 'package:centurus_web_app/view/helpers/app_constants.dart';
 import 'package:centurus_web_app/view/helpers/footer.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ContactUsScreen extends StatelessWidget {
-  const ContactUsScreen({Key? key}) : super(key: key);
+class ContactUsScreen extends StatefulWidget {
+  const ContactUsScreen({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<ContactUsScreen> createState() => _ContactUsScreenState();
+}
+
+class _ContactUsScreenState extends State<ContactUsScreen> {
+  String facebookUrl = '';
+  String instagramUrl = '';
+  String linkedinUrl = '';
+  String twitterUrl = '';
+  String tumblerUrl = '';
+  String copyright = '';
+
+  Future<void> footerInfo() async {
+    FirebaseFirestore.instance
+        .collection('contact_info')
+        .doc('ktAHRJ91DTPsHz5fNiLA')
+        .get()
+        .then((value) {
+      setState(() {
+        facebookUrl = value.get('facebook_url');
+        instagramUrl = value.get('instagram_url');
+        linkedinUrl = value.get('linkedin_url');
+        twitterUrl = value.get('twitter_url');
+        tumblerUrl = value.get('tumblr_url');
+        copyright = value.get('copyright');
+      });
+      log('email is : $facebookUrl');
+    });
+  }
+
+  @override
+  void initState() {
+    footerInfo();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    //var height = MediaQuery.of(context).size.height;
-
+    // var height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         width: width,
@@ -61,15 +101,16 @@ class ContactUsScreen extends StatelessWidget {
                         height: 20,
                       ),
                       SizedBox(
-                          width: width / 3,
-                          child: Text(
-                            'Whatever your goal or project size we will handel it utilize standards compliant. We hope you will be 100% satisfied.',
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white.withOpacity(0.9),
-                              fontSize: 15,
-                            ),
-                          )),
+                        width: width / 3,
+                        child: Text(
+                          'Whatever your goal or project size we will handel it utilize standards compliant. We hope you will be 100% satisfied.',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white.withOpacity(0.9),
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
                       const SizedBox(
                         height: 20,
                       ),
@@ -113,8 +154,9 @@ class ContactUsScreen extends StatelessWidget {
                             height: 50,
                             width: 50,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                color: Colors.amber),
+                              borderRadius: BorderRadius.circular(25),
+                              color: Colors.amber,
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
@@ -123,8 +165,9 @@ class ContactUsScreen extends StatelessWidget {
                             height: 40,
                             width: 40,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                color: Colors.amber),
+                              borderRadius: BorderRadius.circular(25),
+                              color: Colors.amber,
+                            ),
                           ),
                           const SizedBox(
                             width: 13,
@@ -133,8 +176,9 @@ class ContactUsScreen extends StatelessWidget {
                             height: 40,
                             width: 40,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                color: Colors.amber),
+                              borderRadius: BorderRadius.circular(25),
+                              color: Colors.amber,
+                            ),
                           ),
                         ],
                       )
@@ -157,46 +201,50 @@ class ContactUsScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                              width: width / 4,
-                              child: Text(
-                                  "Fill out the form and we'll be in touch as soon as possible,",
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.black,
-                                    fontSize: 24,
-                                  ))),
+                            width: width / 4,
+                            child: Text(
+                              "Fill out the form and we'll be in touch as soon as possible,",
+                              style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w700,
+                                color: Colors.black,
+                                fontSize: 24,
+                              ),
+                            ),
+                          ),
                           const SizedBox(
                             height: 25,
                           ),
-                          Row(children: [
-                            SizedBox(
-                              width: width / 7.5,
-                              child: const TextField(
-                                obscureText: true,
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color:
-                                            Color.fromARGB(255, 212, 212, 212)),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: width / 7.5,
+                                child: const TextField(
+                                  obscureText: true,
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Color.fromARGB(
+                                              255, 212, 212, 212)),
+                                    ),
+                                    labelText: 'Name',
                                   ),
-                                  labelText: 'Name',
                                 ),
                               ),
-                            ),
-                            const SizedBox(
-                              width: 14,
-                            ),
-                            SizedBox(
-                              width: width / 7.5,
-                              child: const TextField(
-                                obscureText: true,
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  labelText: 'Email',
+                              const SizedBox(
+                                width: 14,
+                              ),
+                              SizedBox(
+                                width: width / 7.5,
+                                child: const TextField(
+                                  obscureText: true,
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(),
+                                    labelText: 'Email',
+                                  ),
                                 ),
                               ),
-                            ),
-                          ]),
+                            ],
+                          ),
                           const SizedBox(
                             height: 15,
                           ),
@@ -264,35 +312,37 @@ class ContactUsScreen extends StatelessWidget {
                           SizedBox(
                             width: width / 3.59,
                             child: Text(
-                                "Yes, I'd like to receive occasional marketing emails from us. I have the right to opt out at any time. View privacy policy.,",
-                                style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.w300,
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                )),
+                              "Yes, I'd like to receive occasional marketing emails from us. I have the right to opt out at any time. View privacy policy.,",
+                              style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w300,
+                                color: Colors.grey,
+                                fontSize: 12,
+                              ),
+                            ),
                           ),
                           const SizedBox(
                             height: 30,
                           ),
                           SizedBox(
-                              height: 50,
-                              width: width / 3.59,
-                              child: Material(
-                                borderRadius: BorderRadius.circular(8),
-                                color: const Color.fromARGB(255, 7, 104, 182),
-                                child: GestureDetector(
-                                    onTap: () {},
-                                    child: Center(
-                                      child: Text(
-                                        'Get Started',
-                                        style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.white,
-                                          fontSize: 15,
-                                        ),
+                            height: 50,
+                            width: width / 3.59,
+                            child: Material(
+                              borderRadius: BorderRadius.circular(8),
+                              color: const Color.fromARGB(255, 7, 104, 182),
+                              child: GestureDetector(
+                                  onTap: () {},
+                                  child: Center(
+                                    child: Text(
+                                      'Get Started',
+                                      style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white,
+                                        fontSize: 15,
                                       ),
-                                    )),
-                              )),
+                                    ),
+                                  )),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -311,7 +361,17 @@ class ContactUsScreen extends StatelessWidget {
             const SizedBox(
               height: 13,
             ),
-            builtFooter(context, Colors.white, mainColor),
+            builtFooter(
+              context,
+              Colors.white,
+              mainColor,
+              facebookUrl,
+              instagramUrl,
+              linkedinUrl,
+              twitterUrl,
+              tumblerUrl,
+              copyright,
+            ),
           ],
         ),
       ),

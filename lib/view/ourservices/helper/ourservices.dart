@@ -9,7 +9,30 @@ import 'package:centurus_web_app/view/navBar/mobile_navbar.dart';
 import 'package:flutter/material.dart';
 
 class OurServices extends StatefulWidget {
-  const OurServices({Key? key}) : super(key: key);
+  final String? phoneNumber;
+  final String? email;
+  final String? address;
+  final String? aboutUs;
+  final String? facebookUrl;
+  final String? instagramUrl;
+  final String? linkedinUrl;
+  final String? twitterUrl;
+  final String? tumblerUrl;
+  final String? copyright;
+  const OurServices(
+      {Key? key,
+      this.phoneNumber,
+      this.email,
+      this.address,
+      this.aboutUs,
+      this.facebookUrl,
+      this.instagramUrl,
+      this.linkedinUrl,
+      this.twitterUrl,
+      this.tumblerUrl,
+      this.copyright
+      })
+      : super(key: key);
 
   @override
   State<OurServices> createState() => _DashboardState();
@@ -44,7 +67,21 @@ class _DashboardState extends State<OurServices>
               servicesDesktopMethod(context),
               clientSayDesktopMethod(context),
               ContactUsDesktopMethod(context),
-              Footer(context, whiteColor, mainColor),
+              Footer(
+                context,
+                whiteColor,
+                mainColor,
+                widget.phoneNumber,
+                widget.email,
+                widget.address,
+                widget.facebookUrl,
+                widget.instagramUrl,
+                widget.linkedinUrl,
+                widget.aboutUs,
+                widget.twitterUrl,
+                widget.tumblerUrl,
+                widget.copyright,
+              ),
             ],
           ),
         ),
